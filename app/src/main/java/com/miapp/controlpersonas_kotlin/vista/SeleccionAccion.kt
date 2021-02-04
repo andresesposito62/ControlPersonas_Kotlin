@@ -12,7 +12,7 @@ class SeleccionAccion : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_seleccion_accion)
+        setContentView(R.layout.activity_action_selector)
     }
 
     fun registrarPersona(view: View){

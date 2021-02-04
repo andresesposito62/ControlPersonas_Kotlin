@@ -24,7 +24,7 @@ class ConsultaRegistro : AppCompatActivity() {
 
     protected override fun onCreate(savedInstanceState : Bundle?){
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_consulta_registro)
+        setContentView(R.layout.activity_read_registrer)
         editTextIdentificacion = findViewById<EditText>(R.id.editTextConsultaIdentificacion)
         editTextNombres = findViewById<EditText>(R.id.editTextConsultaNombres)
         editTextApellidos = findViewById<EditText>(R.id.editTextConsultaApellidos)
