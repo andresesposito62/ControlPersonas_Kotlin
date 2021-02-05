@@ -10,15 +10,18 @@ class LoginPresenter : LoginInteractor.OnLoginFinishedListener {
         this.loginInteractor = loginInteractor
     }
 
-    fun validateCredentials(username : String, password : String){
+    fun validateCredentials(username: String, password: String){
         if(loginView != null){
             loginView?.showProgress()
         }
-        loginInteractor?.login(username, password,this)
+        loginInteractor?.login(username, password, this)
     }
 
-    fun onDestroy(){
-        loginView = null
+    fun onResume() {
+        if (loginView!= null) {
+            //loginView.showProgress()
+        }
+        //findItemsInteractor.findItems({ items: List<String?>? -> this.onFinished(items) })
     }
 
     override fun onUsernameError(){

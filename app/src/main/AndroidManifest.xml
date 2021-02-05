@@ -12,6 +12,7 @@
         <activity android:name=".vista.SeleccionAccion"/>
         <activity android:name=".actionselector.ActionSelectorActivity"/>
         <activity android:name=".readregistrer.ReadRegistrerActivity"/>
+        <activity android:name=".createregistrer.CreateRegistrerActivity"/>
         <activity android:name=".vista.Login"/>
         <activity android:name=".vista.ActualizaRegistro"/>
         <activity android:name=".vista.ConsultaRegistro"/>

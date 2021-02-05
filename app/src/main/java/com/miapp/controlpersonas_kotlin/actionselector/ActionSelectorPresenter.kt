@@ -1,24 +1,44 @@
 package com.miapp.controlpersonas_kotlin.actionselector
 
-class ActionSelectorPresenter : ActionSelectorInteractor{
+class ActionSelectorPresenter {
 
-    private var actionSelectorView: ActionSelectorView? = null
-    private var actionSelectorInteractor : ActionSelectorInteractor? = null
+    private var actionSelectorView : ActionSelectorView? = null
 
-    constructor(actionSelectorView: ActionSelectorView, actionSelectorInteractor: ActionSelectorInteractor){
+    constructor(actionSelectorView: ActionSelectorView){
         this.actionSelectorView = actionSelectorView
-        this.actionSelectorInteractor = actionSelectorInteractor
     }
 
-    fun chooseActivity(string: String) {
-        if(actionSelectorView != null){
-            //if(string.equals("READ_REGISTRER")){
-               //actionSelectorView?.navigateToReadRegistrer()
-            //}
+    /*fun onResume(){
+        if(actionSelectorView != null) {
+            //actionSelectorView?.navigateToReadRegistrer()
+        }
+    }*/
+
+    fun onResume() {
+
+    }
+
+    fun createRegistrerPressed(){
+        if(actionSelectorView !=null){
+            actionSelectorView?.navigateToCreateRegistrer()
         }
     }
 
-    fun onDestroy(){
-        actionSelectorView = null
+    fun readRegistrerPressed(){
+        if(actionSelectorView !=null){
+            actionSelectorView?.navigateToReadRegistrer()
+        }
+    }
+
+    fun updateRegistrerPressed(){
+        if(actionSelectorView !=null){
+            actionSelectorView?.navigateToUpdateRegistrer()
+        }
+    }
+
+    fun deleteRegistrerPressed(){
+        if(actionSelectorView !=null){
+            actionSelectorView?.navigateToDeleteRegistrer()
+        }
     }
 }

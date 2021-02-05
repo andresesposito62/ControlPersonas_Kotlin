@@ -3,7 +3,7 @@ package com.miapp.controlpersonas_kotlin.login
 import android.os.Handler
 import android.text.TextUtils
 
-open class LoginInteractor {
+class LoginInteractor {
 
     interface OnLoginFinishedListener{
         fun onUsernameError()

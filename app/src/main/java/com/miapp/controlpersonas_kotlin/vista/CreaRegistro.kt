@@ -21,7 +21,7 @@ class CreaRegistro : AppCompatActivity() {
     var rol = "PARTNER"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_crea_registro)
+        setContentView(R.layout.activity_create_registrer)
         editTextIdentificacion = findViewById<View>(R.id.editTextRegistroIdentificacion) as EditText
         editTextNombres = findViewById<View>(R.id.editTextRegistroNombres) as EditText
         editTextApellidos = findViewById<View>(R.id.editTextRegistroApellidos) as EditText
