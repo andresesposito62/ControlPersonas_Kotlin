@@ -9,4 +9,5 @@ interface ReadRegistrerView {
     fun navigateToActionSelector()
     fun setQueryError()
     fun setDates(persona: Persona)
+    fun setIdentificationEmptyError()
 }

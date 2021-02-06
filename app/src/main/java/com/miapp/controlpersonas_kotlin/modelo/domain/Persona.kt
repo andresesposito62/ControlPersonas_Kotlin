@@ -14,7 +14,7 @@ class Persona  {
 
     fun Persona() {}
 
-    fun Constructor(identificacion: String?, nombres: String?, apellidos: String?,
+    fun constructor(identificacion: String?, nombres: String?, apellidos: String?,
                 telefono: String?, temperatura: String?, rol: String?) {
         this.identificacion = identificacion
         this.nombres = nombres

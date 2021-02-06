@@ -6,9 +6,10 @@ import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 class ReadRegistrerPresenter : ReadRegistrerInteractor.OnLoginFinishedListener {
 
     private var readRegistrerView : ReadRegistrerView? = null
-    private var readRegistrerInteractor : ReadRegistrerInteractor? = null
-    private var context : Context? = null
-    private var person : Persona? = null
+    private var readRegistrerInteractor : ReadRegistrerInteractor//? = null
+    private var context : Context
+    private var person = Persona()
+
 
     constructor(readRegistrerView: ReadRegistrerView, readRegistrerInteractor: ReadRegistrerInteractor, context: Context){
         this.readRegistrerView = readRegistrerView
@@ -17,23 +18,34 @@ class ReadRegistrerPresenter : ReadRegistrerInteractor.OnLoginFinishedListener {
     }
 
 
-    fun readRegistrer(identification : String, names : String, surnames : String, phone: String, temperature : String, rol : String ){
+    fun readRegistrer(identification : String, names : String, surnames : String, phone: String,
+                      temperature : String, rol : String ){
         if(readRegistrerView != null){
           //  readRegistrerView?.showProgress()
         }
-        //person!!.setIdentificacion(identification)
-        //person!!.setNombres(names)
-        //person!!.setApellidos(surnames)
-        //person!!.setTemperatura(temperature)
-        //person!!.setRol(rol)
-        readRegistrerInteractor?.login(person!!,this, context)
+
+        if(identification != ""){
+            person.setIdentificacion(identification)
+            person.setNombres(names)
+            person.setTelefono(phone)
+            person.setApellidos(surnames)
+            person.setTemperatura(temperature)
+            person.setRol(rol)
+            readRegistrerInteractor.queryToDataBase(person,this, context)
+        }else{
+            setIdentificationEmptyError()
+        }
     }
 
     override fun onIdentificationError() {
-        TODO("Not yet implemented")
+        readRegistrerView!!.setQueryError()
     }
 
     override fun onSuccess(persona: Persona) {
-        //readRegistrerView!!.setDates(persona)
+        readRegistrerView!!.setDates(persona)
+    }
+
+    fun setIdentificationEmptyError(){
+        readRegistrerView!!.setIdentificationEmptyError()
     }
 }
