@@ -1,4 +1,4 @@
-package com.miapp.controlpersonas_kotlin.readregistrer
+package com.miapp.controlpersonas_kotlin.deleteregistrer
 
 import android.os.Bundle
 import android.view.View
@@ -8,11 +8,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.miapp.controlpersonas_kotlin.R
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
+import com.miapp.controlpersonas_kotlin.readregistrer.ReadRegistrerInteractor
 
-class ReadRegistrerActivity : AppCompatActivity(), ReadRegistrerView {
+class DeleteRegistrerActivity : AppCompatActivity(), DeleteRegistrerView{
 
     private var progressBar : ProgressBar? = null
-    private var presenter : ReadRegistrerPresenter? = null
+    private var presenter : DeleteRegistrerPresenter? = null
     private var rolProvitional : String = "PARTNER"
     private var editTextIdentification : EditText? = null
     private var editTextNames : EditText? = null
@@ -22,24 +23,19 @@ class ReadRegistrerActivity : AppCompatActivity(), ReadRegistrerView {
 
     override fun onCreate(savedIntanceState: Bundle?){
         super.onCreate(savedIntanceState)
-        setContentView(R.layout.activity_read_registrer)
+        setContentView(R.layout.activity_delete_registrer)
         //progressBar = findViewById<EditText>(R.id.progressbarReadRegistrer).text.toString()
-        editTextIdentification = findViewById<EditText>(R.id.editTextConsultaIdentificacion)
-        editTextNames = findViewById<EditText>(R.id.editTextConsultaNombres)
-        editTextSurnames = findViewById<EditText>(R.id.editTextConsultaApellidos)
-        editTextPhone = findViewById<EditText>(R.id.editTextConsultaTelefono)
-        editTextTemperature  = findViewById<EditText>(R.id.editTextConsultaTemperatura)
-
-        presenter = ReadRegistrerPresenter(this, ReadRegistrerInteractor(), this)
+        editTextIdentification = findViewById<EditText>(R.id.editTextIEliminacionIdentificacion)
+        presenter = DeleteRegistrerPresenter(this, DeleteRegistrerInteractor(), this)
     }
 
-    fun readRegistrer(view: View){
+    fun deleteRegistrer(view: View){
         var identification =  editTextIdentification?.text.toString().trim()
         var names = editTextNames?.text.toString().trim()
         var surnames = editTextSurnames?.text.toString().trim()
         var phone = editTextPhone?.text.toString().trim()
         var temperature = editTextTemperature?.text.toString().trim()
-        presenter?.readRegistrer(identification, names, surnames, phone, temperature, rolProvitional)
+        presenter?.deleteRegistrer(identification, names, surnames, phone, temperature, rolProvitional)
     }
 
 
@@ -63,12 +59,13 @@ class ReadRegistrerActivity : AppCompatActivity(), ReadRegistrerView {
         Toast.makeText(this, "Error en la consulta", Toast.LENGTH_SHORT).show()
     }
 
-    override fun setDates(persona: Persona) {
-        editTextIdentification?.setText(persona.getIdentificacion())
-        editTextNames?.setText(persona.getNombres())
-        editTextSurnames?.setText(persona.getApellidos())
-        editTextPhone?.setText(persona.getTelefono())
-        editTextTemperature ?.setText(persona.getTemperatura())
+    override fun setDates() {
+        editTextIdentification?.setText("")
+        editTextNames?.setText("")
+        editTextSurnames?.setText("")
+        editTextPhone?.setText("")
+        editTextTemperature ?.setText("")
+        Toast.makeText(this, "Registro eliminado correctamente!", Toast.LENGTH_SHORT).show()
     }
 
     override fun setIdentificationEmptyError(){

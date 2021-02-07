@@ -9,17 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ControlPersonas_Kotlin">
-        <activity android:name=".vista.SeleccionAccion"/>
         <activity android:name=".actionselector.ActionSelectorActivity"/>
+        <activity android:name=".updateregistrer.UpdateRegistrerActivity"/>
+        <activity android:name=".deleteregistrer.DeleteRegistrerActivity"/>
         <activity android:name=".readregistrer.ReadRegistrerActivity"/>
         <activity android:name=".createregistrer.CreateRegistrerActivity"/>
-        <activity android:name=".vista.Login"/>
-        <activity android:name=".vista.ActualizaRegistro"/>
-        <activity android:name=".vista.ConsultaRegistro"/>
-        <activity android:name=".vista.EliminaRegistro"/>
-        <activity android:name=".vista.RegistroCredenciales"/>
-        <activity android:name=".vista.CreaRegistro"/>
-        <activity android:name=".vista.RestableceContrasena"/>
         <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

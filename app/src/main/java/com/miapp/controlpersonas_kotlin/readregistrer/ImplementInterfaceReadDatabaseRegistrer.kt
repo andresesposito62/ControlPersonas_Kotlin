@@ -2,10 +2,10 @@ package com.miapp.controlpersonas_kotlin.readregistrer
 
 import android.content.Context
 import com.miapp.controlpersonas_kotlin.modelo.datos.AdminSQLiteOpenHelper
-import com.miapp.controlpersonas_kotlin.modelo.datos.InterfaceReadFromDataBase
+import com.miapp.controlpersonas_kotlin.modelo.datos.InterfaceReadDatabaseRegistrer
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 
-class ImplementsInterfaceReadFromDataBase : InterfaceReadFromDataBase {
+class ImplementInterfaceReadDatabaseRegistrer : InterfaceReadDatabaseRegistrer {
 
     override fun readRegistrerFromDataBase(persona: Persona, context: Context): Persona{
         var identificacion = persona.getIdentificacion()

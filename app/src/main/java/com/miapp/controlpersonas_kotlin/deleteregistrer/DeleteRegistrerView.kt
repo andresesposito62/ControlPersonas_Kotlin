@@ -1,13 +1,13 @@
-package com.miapp.controlpersonas_kotlin.readregistrer
+package com.miapp.controlpersonas_kotlin.deleteregistrer
 
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 
-interface ReadRegistrerView {
+interface DeleteRegistrerView {
     fun showProgress()
     fun hideProgress()
     fun setIdentificationError()
     fun navigateToActionSelector()
     fun setQueryError()
-    fun setDates(persona: Persona)
+    fun setDates()
     fun setIdentificationEmptyError()
 }

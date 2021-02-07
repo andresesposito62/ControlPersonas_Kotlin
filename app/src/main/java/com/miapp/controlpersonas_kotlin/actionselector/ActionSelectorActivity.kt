@@ -6,7 +6,10 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.miapp.controlpersonas_kotlin.R
+import com.miapp.controlpersonas_kotlin.createregistrer.CreateRegistrerActivity
+import com.miapp.controlpersonas_kotlin.deleteregistrer.DeleteRegistrerActivity
 import com.miapp.controlpersonas_kotlin.readregistrer.ReadRegistrerActivity
+import com.miapp.controlpersonas_kotlin.updateregistrer.UpdateRegistrerActivity
 
 class ActionSelectorActivity : AppCompatActivity(), ActionSelectorView{
 
@@ -41,13 +44,12 @@ class ActionSelectorActivity : AppCompatActivity(), ActionSelectorView{
         presenter?.deleteRegistrerPressed()
     }
 
-
     override  fun navigateToHome(){
         Toast.makeText(this, "Navegando a Home", Toast.LENGTH_SHORT).show()
     }
 
     override fun navigateToCreateRegistrer(){
-        val intent = Intent(this, ReadRegistrerActivity::class.java)
+        val intent = Intent(this, CreateRegistrerActivity::class.java)
         startActivity(intent)
     }
 
@@ -57,11 +59,11 @@ class ActionSelectorActivity : AppCompatActivity(), ActionSelectorView{
     }
 
     override fun navigateToUpdateRegistrer(){
-        val intent = Intent(this, ReadRegistrerActivity::class.java)
+        val intent = Intent(this, UpdateRegistrerActivity::class.java)
         startActivity(intent)
     }
     override fun navigateToDeleteRegistrer(){
-        val intent = Intent(this, ReadRegistrerActivity::class.java)
+        val intent = Intent(this, DeleteRegistrerActivity::class.java)
         startActivity(intent)
     }
 
