@@ -19,9 +19,8 @@ class LoginPresenter : LoginInteractor.OnLoginFinishedListener {
 
     fun onResume() {
         if (loginView!= null) {
-            //loginView.showProgress()
+            loginView?.hideProgress()
         }
-        //findItemsInteractor.findItems({ items: List<String?>? -> this.onFinished(items) })
     }
 
     override fun onUsernameError(){

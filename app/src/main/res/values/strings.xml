@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ControlPersonas_Kotlin</string>
+    <string name="app_name">ingresApp</string>
     <string name="hinteditTextVacio"></string>string>
     <string name="hinteditTextIngreseIdentificacion">Ingrese identificacion</string>string>
     <string name="editTextUsuario"></string>string>

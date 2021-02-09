@@ -28,7 +28,7 @@ class UpdateRegistrerActivity : AppCompatActivity(), UpdateRegistrerView{
         editTextIdentification = findViewById<EditText>(R.id.editTextActualizacionIdentificacion)
         editTextNames = findViewById<EditText>(R.id.editTextActualizacionNombres)
         editTextSurnames = findViewById<EditText>(R.id.editTextActualizacionApellidos)
-        editTextPhone = findViewById<EditText>(R.id.editTextActualizacionApellidos)
+        editTextPhone = findViewById<EditText>(R.id.editTextActualizacionTelefono)
         editTextTemperature  = findViewById<EditText>(R.id.editTextActualizacionTemperatura)
 
         presenter = UpdateRegistrerPresenter(this, UpdateRegistrerInteractor(), this)

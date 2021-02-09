@@ -14,9 +14,7 @@ class ActionSelectorPresenter {
         }
     }*/
 
-    fun onResume() {
-
-    }
+    fun onResume() { }
 
     fun createRegistrerPressed(){
         if(actionSelectorView !=null){

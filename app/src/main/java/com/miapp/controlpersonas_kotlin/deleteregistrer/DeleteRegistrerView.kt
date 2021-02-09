@@ -4,10 +4,17 @@ import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 
 interface DeleteRegistrerView {
     fun showProgress()
+
     fun hideProgress()
+
     fun setIdentificationError()
+
     fun navigateToActionSelector()
+
     fun setQueryError()
+
     fun setDates()
+
     fun setIdentificationEmptyError()
+
 }

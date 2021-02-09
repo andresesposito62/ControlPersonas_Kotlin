@@ -25,7 +25,6 @@ class LoginActivity : AppCompatActivity(), LoginView {
         password = findViewById(R.id.editTextPassword)
         findViewById<Button>(R.id.botonLogin).setOnClickListener({ v: View? -> validateCredentials() })
         presenter = LoginPresenter(this, LoginInteractor())
-
     }
 
     override fun onResume() {

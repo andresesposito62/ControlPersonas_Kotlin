@@ -36,7 +36,7 @@
         android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:text="@string/editTextUsuario"
-        android:textColor="@color/black"
+        android:textColor="#144359"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="150dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="150dp"
         android:text="@string/textViewUsuario"
         android:textAlignment="textStart"
@@ -56,7 +56,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -70,7 +70,7 @@
         android:importantForAutofill="no"
         android:inputType="textPassword"
         android:text="@string/editTextPassword"
-        android:textColor="@color/black"
+        android:textColor="#144359"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -149,5 +149,19 @@
         app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toBottomOf="@+id/botonRegistrerUser"
         app:srcCompat="@drawable/iconofacebook" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="100dp"
+        android:backgroundTint="#144359"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_app" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

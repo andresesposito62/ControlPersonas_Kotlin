@@ -31,7 +31,6 @@ class CreateRegistrerActivity : AppCompatActivity(), CreateRegistrerView {
         editTextSurnames = findViewById<EditText>(R.id.editTextRegistroApellidos)
         editTextPhone = findViewById<EditText>(R.id.editTextRegistroTelefono)
         editTextTemperature  = findViewById<EditText>(R.id.editTextRegistroTemperatura)
-
         presenter = CreateRegistrerPresenter(this, CreateRegistrerInteractor(), this)
     }
 
@@ -63,7 +62,6 @@ class CreateRegistrerActivity : AppCompatActivity(), CreateRegistrerView {
     override fun setValuesEmptyError() {
         Toast.makeText(this, "Debes diligenciar todos los campos!", Toast.LENGTH_SHORT).show()
     }
-
 
     override fun setSucces() {
         editTextIdentification?.setText("")
