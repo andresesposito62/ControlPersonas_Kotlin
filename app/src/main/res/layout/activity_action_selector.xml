@@ -2,143 +2,15 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#d3e0ea"
-    tools:context=".actionselector.ActionSelectorActivity">
+    tools:context=".actionselector.ActionSelectorActivity"
+    android:padding="30dp">
 
-    <ImageButton
-        android:id="@+id/imageButtonConsultar"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="150dp"
-        android:background="@drawable/button_selector"
-        android:backgroundTint="#144359"
-        android:contentDescription="@string/imageButtonConsultar"
-        android:onClick="readRegistrer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNombres"
-        app:srcCompat="@drawable/consultar" />
-
-    <TextView
-        android:id="@+id/textViewNombres"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginLeft="100dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
-        android:text="@string/textViewConsultar"
-        android:textColor="#144359"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonRegistrar" />
-
-    <TextView
-        android:id="@+id/textViewIdentificacion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="100dp"
-        android:text="@string/textViewRegistrar"
-        android:textColor="#144359"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textViewActualizar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginRight="150dp"
-        android:text="@string/textViewActualizar"
-        android:textColor="#144359"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.628"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonConsultar" />
-
-    <TextView
-        android:id="@+id/textViewEliminar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginRight="150dp"
-        android:text="@string/textViewEliminar"
-        android:textColor="#144359"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.411"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButtonActualizar" />
-
-    <ImageButton
-        android:id="@+id/imageButtonRegistrar"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="150dp"
-        android:background="@drawable/button_selector"
-        android:backgroundTint="#144359"
-        android:contentDescription="@string/imageButtonRegistrar"
-        android:onClick="createRegistrer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewIdentificacion"
-        app:srcCompat="@drawable/registro" />
-
-    <ImageButton
-        android:id="@+id/imageButtonActualizar"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="150dp"
-        android:background="@drawable/button_selector"
-        android:backgroundTint="#144359"
-        android:contentDescription="@string/imageButtonActualizar"
-        android:onClick="updateRegistrer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewActualizar"
-        app:srcCompat="@drawable/actualizar" />
-
-    <ImageButton
-        android:id="@+id/imageButtonEliminar"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="150dp"
-        android:background="@drawable/button_selector"
-        android:backgroundTint="#144359"
-        android:contentDescription="@string/imageButtonEliminar"
-        android:onClick="deleteRegistrer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEliminar"
-        app:srcCompat="@drawable/eliminar" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

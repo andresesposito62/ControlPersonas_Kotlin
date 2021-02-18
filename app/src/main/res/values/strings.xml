@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">ingresApp</string>
-    <string name="hinteditTextVacio"></string>string>
+    <string name="hinteditTextVacio" />string>
     <string name="hinteditTextIngreseIdentificacion">Ingrese identificacion</string>string>
-    <string name="editTextUsuario"></string>string>
-    <string name="editTextPassword"></string>string>
+    <string name="editTextUsuario" />string>
+    <string name="editTextPassword" />string>
     <string name="botonLogin">LOGIN</string>string>
     <string name="botonCrearRegistro">CREAR REGISTRO</string>string>
     <string name="botonConsultarRegistro">CONSULTAR REGISTRO</string>string>
@@ -25,26 +25,27 @@
     <string name="textViewTelefono">Teléfono</string>string>
     <string name="textViewTemperatura">Temperatura en °C</string>string>
     <string name="textViewRol">Rol</string>string>
-    <string name="editTextRegistroIdentificacion"></string>string>
-    <string name="editTextRegistroNombres"></string>string>
-    <string name="editTextRegistroApellidos"></string>string>
-    <string name="editTextRegistroTelefono"></string>
-    <string name="editTextRegistroTemperatura"></string>
-    <string name="editTextConsultaIdentificacion"></string>string>
-    <string name="editTextConsultaNombres"></string>string>
-    <string name="editTextConsultaApellidos"></string>string>
-    <string name="editTextConsultaTelefono"></string>
-    <string name="editTextConsultaTemperatura"></string>
-    <string name="editTextActualizaIdentificacion"></string>string>
-    <string name="editTextActualizaNombres"></string>string>
-    <string name="editTextActualizaApellidos"></string>string>
-    <string name="editTextActualizaTelefono"></string>
-    <string name="editTextActualizaTemperatura"></string>
-    <string name="editTextEliminaIdentificacion"></string>
+    <string name="editTextRegistroIdentificacion" />string>
+    <string name="editTextRegistroNombres" />string>
+    <string name="editTextRegistroApellidos" />string>
+    <string name="editTextRegistroTelefono" />
+    <string name="editTextRegistroTemperatura" />
+    <string name="editTextConsultaIdentificacion" />string>
+    <string name="editTextConsultaNombres" />string>
+    <string name="editTextConsultaApellidos" />string>
+    <string name="editTextConsultaTelefono" />
+    <string name="editTextConsultaTemperatura" />
+    <string name="editTextActualizaIdentificacion" />string>
+    <string name="editTextActualizaNombres" />string>
+    <string name="editTextActualizaApellidos" />string>
+    <string name="editTextActualizaTelefono" />
+    <string name="editTextActualizaTemperatura" />
+    <string name="editTextEliminaIdentificacion" />
     <string name="botonEliminar">Eliminar</string>string>
     <string name="botonRegistrar">Registrar</string>
     <string name="botonActualizar">Actualizar</string>
     <string name="botonConsultar">Consultar</string>
-    <string name="progressBar"></string>
+    <string name="progressBar" />
+    <string name="imagen" />
     <![CDATA[string>]]>
 </resources>
