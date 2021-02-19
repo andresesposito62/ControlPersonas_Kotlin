@@ -2,6 +2,9 @@ package com.miapp.controlpersonas_kotlin.readregistrer
 
 import android.content.Context
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class ReadRegistrerPresenter : ReadRegistrerInteractor.OnLoginFinishedListener {
 
@@ -31,9 +34,20 @@ class ReadRegistrerPresenter : ReadRegistrerInteractor.OnLoginFinishedListener {
             person.setApellidos(surnames)
             person.setTemperatura(temperature)
             person.setRol(rol)
-            readRegistrerInteractor.queryToDataBase(person,this, context)
+
+            readRegistrerView?.showProgress()
+            searchToDatabase(person)
+
+            //readRegistrerInteractor.queryToDataBase(person,this, context)
         }else{
             setIdentificationEmptyError()
+        }
+    }
+
+    private fun searchToDatabase(person: Persona){//implementacion corrutina
+        CoroutineScope(Dispatchers.IO).launch {
+            readRegistrerInteractor.queryToDataBase(person,this@ReadRegistrerPresenter, context)
+
         }
     }
 
