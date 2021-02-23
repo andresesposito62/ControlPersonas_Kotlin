@@ -13,7 +13,7 @@ interface DeleteRegistrerView {
 
     fun setQueryError()
 
-    fun setDates()
+    fun setSucces()
 
     fun setIdentificationEmptyError()
 

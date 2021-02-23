@@ -24,7 +24,7 @@ class UpdateRegistrerActivity : AppCompatActivity(), UpdateRegistrerView{
     override fun onCreate(savedIntanceState: Bundle?){
         super.onCreate(savedIntanceState)
         setContentView(R.layout.activity_update_registrer)
-        //progressBar = findViewById<EditText>(R.id.progressbarReadRegistrer).text.toString()
+        progressBar = findViewById<ProgressBar>(R.id.progressBarUpdateRegistrer)
         editTextIdentification = findViewById<EditText>(R.id.editTextActualizacionIdentificacion)
         editTextNames = findViewById<EditText>(R.id.editTextActualizacionNombres)
         editTextSurnames = findViewById<EditText>(R.id.editTextActualizacionApellidos)
@@ -43,19 +43,20 @@ class UpdateRegistrerActivity : AppCompatActivity(), UpdateRegistrerView{
         presenter?.updateRegistrer(identification, names, surnames, phone, temperature, rolProvitional)
     }
 
-    override fun showProgress() {
-        TODO("Not yet implemented")
-    }
+    override fun showProgress(){progressBar?.setVisibility(View.VISIBLE)}
 
-    override fun hideProgress() {
-        TODO("Not yet implemented")
-    }
+    override fun hideProgress(){progressBar?.setVisibility(View.GONE)}
 
     override fun navigateToActionSelector() {
         TODO("Not yet implemented")
     }
 
     override fun setQueryError() {
+        editTextIdentification?.setText("")
+        editTextNames?.setText("")
+        editTextSurnames?.setText("")
+        editTextPhone?.setText("")
+        editTextTemperature ?.setText("")
         Toast.makeText(this, "Error al actualizar el registro!", Toast.LENGTH_SHORT).show()
     }
 

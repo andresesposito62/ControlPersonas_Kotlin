@@ -25,7 +25,7 @@ class CreateRegistrerActivity : AppCompatActivity(), CreateRegistrerView {
     override fun onCreate(savedIntanceState: Bundle?){
         super.onCreate(savedIntanceState)
         setContentView(R.layout.activity_create_registrer)
-        //progressBar = findViewById<EditText>(R.id.progressbarReadRegistrer).text.toString()
+        progressBar = findViewById(R.id.progressBarCreateRegistrer)
         editTextIdentification = findViewById<EditText>(R.id.editTextRegistroIdentificacion)
         editTextNames = findViewById<EditText>(R.id.editTextRegistroNombres)
         editTextSurnames = findViewById<EditText>(R.id.editTextRegistroApellidos)
@@ -43,19 +43,20 @@ class CreateRegistrerActivity : AppCompatActivity(), CreateRegistrerView {
         presenter?.createRegistrer(identification, names, surnames, phone, temperature, rolProvitional)
     }
 
-    override fun showProgress() {
-        TODO("Not yet implemented")
-    }
+    override fun showProgress(){progressBar?.setVisibility(View.VISIBLE)}
 
-    override fun hideProgress() {
-        TODO("Not yet implemented")
-    }
+    override fun hideProgress(){progressBar?.setVisibility(View.GONE)}
 
     override fun navigateToActionSelector() {
         TODO("Not yet implemented")
     }
 
     override fun setQueryError() {
+        editTextIdentification?.setText("")
+        editTextNames?.setText("")
+        editTextSurnames?.setText("")
+        editTextPhone?.setText("")
+        editTextTemperature ?.setText("")
         Toast.makeText(this, "Error al crear el registro!", Toast.LENGTH_SHORT).show()
     }
 

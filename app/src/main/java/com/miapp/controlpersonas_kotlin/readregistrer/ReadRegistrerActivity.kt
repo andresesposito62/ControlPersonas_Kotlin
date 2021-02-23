@@ -8,6 +8,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.miapp.controlpersonas_kotlin.R
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class ReadRegistrerActivity : AppCompatActivity(), ReadRegistrerView {
 
@@ -23,7 +26,7 @@ class ReadRegistrerActivity : AppCompatActivity(), ReadRegistrerView {
     override fun onCreate(savedIntanceState: Bundle?){
         super.onCreate(savedIntanceState)
         setContentView(R.layout.activity_read_registrer)
-        //progressBar = findViewById<EditText>(R.id.progressbarReadRegistrer).text.toString()
+        progressBar = findViewById(R.id.progressBarReadRegistrer)
         editTextIdentification = findViewById<EditText>(R.id.editTextConsultaIdentificacion)
         editTextNames = findViewById<EditText>(R.id.editTextConsultaNombres)
         editTextSurnames = findViewById<EditText>(R.id.editTextConsultaApellidos)
@@ -42,17 +45,12 @@ class ReadRegistrerActivity : AppCompatActivity(), ReadRegistrerView {
         presenter?.readRegistrer(identification, names, surnames, phone, temperature, rolProvitional)
     }
 
+    override fun showProgress(){progressBar?.setVisibility(View.VISIBLE)}
 
-    override fun showProgress() {
-        Toast.makeText(this, "Prueba", Toast.LENGTH_SHORT).show()
-    }
-
-    override fun hideProgress() {
-        TODO("Not yet implemented")
-    }
+    override fun hideProgress(){progressBar?.setVisibility(View.GONE)}
 
     override fun setIdentificationError() {
-        TODO("Not yet implemented")
+        Toast.makeText(this, "Error en la consulta", Toast.LENGTH_SHORT).show()
     }
 
     override fun navigateToActionSelector() {
@@ -61,6 +59,11 @@ class ReadRegistrerActivity : AppCompatActivity(), ReadRegistrerView {
 
     override fun setQueryError() {
         Toast.makeText(this, "Error en la consulta", Toast.LENGTH_SHORT).show()
+        editTextIdentification?.setText("")
+        editTextNames?.setText("")
+        editTextSurnames?.setText("")
+        editTextPhone?.setText("")
+        editTextTemperature?.setText("")
     }
 
     override fun setDates(persona: Persona) {
@@ -68,10 +71,11 @@ class ReadRegistrerActivity : AppCompatActivity(), ReadRegistrerView {
         editTextNames?.setText(persona.getNombres())
         editTextSurnames?.setText(persona.getApellidos())
         editTextPhone?.setText(persona.getTelefono())
-        editTextTemperature ?.setText(persona.getTemperatura())
+        editTextTemperature?.setText(persona.getTemperatura())
     }
 
     override fun setIdentificationEmptyError(){
         Toast.makeText(this, "Debes diligenciar el número de identificación", Toast.LENGTH_SHORT).show()
     }
+
 }

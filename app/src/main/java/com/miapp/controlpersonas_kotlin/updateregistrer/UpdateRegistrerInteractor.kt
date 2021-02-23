@@ -6,21 +6,18 @@ import com.miapp.controlpersonas_kotlin.modelo.datos.InterfaceUpdateDatabaseRegi
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 
 class UpdateRegistrerInteractor {
-    interface OnLoginFinishedListener{
-        fun onCreateRegistrerError()
 
-        fun onSuccess()
-    }
+    fun queryToDataBase(persona: Persona, context: Context) : Boolean{
 
-    fun queryToDataBase(persona: Persona, listener: OnLoginFinishedListener, context: Context){
-
+        var status = false
         var implementInterfaceUpdateDatabaseRegistrer = ImplementInterfaceUpdateDatabaseRegistrer()
         var  affectedRegistrers = implementInterfaceUpdateDatabaseRegistrer.actualizarPersona(persona, context)
 
         if(affectedRegistrers!= -1L){
-            listener.onSuccess()
+            status = true
         }else{
-            listener.onCreateRegistrerError()
+            status = false
         }
+        return status
     }
 }

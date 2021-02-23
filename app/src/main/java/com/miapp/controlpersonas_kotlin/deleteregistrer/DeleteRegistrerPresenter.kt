@@ -1,9 +1,13 @@
 package com.miapp.controlpersonas_kotlin.deleteregistrer
 
 import android.content.Context
+import androidx.appcompat.app.AppCompatActivity
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
-class DeleteRegistrerPresenter : DeleteRegistrerInteractor.OnLoginFinishedListener {
+class DeleteRegistrerPresenter : AppCompatActivity {
 
     private var deleteRegistrerView :DeleteRegistrerView? = null
     private var deleteRegistrerInteractor : DeleteRegistrerInteractor//? = null
@@ -24,20 +28,30 @@ class DeleteRegistrerPresenter : DeleteRegistrerInteractor.OnLoginFinishedListen
             //  readRegistrerView?.showProgress()
         }
 
-        if(identification != ""){
+        if(!identification.isEmpty()){
             person.setIdentificacion(identification)
-            deleteRegistrerInteractor.queryToDataBase(person,this, context)
+            deleteRegistrerView?.showProgress()
+            android.os.Handler().postDelayed({// se pone en un retardo de 2seg simulando una consulta a un servidor externo
+                queryToDatabase(person)
+            }, 2000)
         }else{
             setIdentificationEmptyError()
         }
     }
 
-    override fun onIdentificationError() {
-        deleteRegistrerView!!.setQueryError()
-    }
-
-    override fun onSuccess() {
-        deleteRegistrerView!!.setDates()
+    private fun queryToDatabase(person: Persona){//implementacion corrutina
+        CoroutineScope(Dispatchers.IO).launch {
+            //readRegistrerInteractor.queryToDataBase(person,this@ReadRegistrerPresenter, context)
+            val personResult : Boolean? = deleteRegistrerInteractor.queryToDataBase(person, context)
+            runOnUiThread{//todo lo que este aqui se ejecuta en el hilo principal
+                deleteRegistrerView?.hideProgress()
+                if(personResult != null){
+                    deleteRegistrerView?.setSucces()
+                }else{
+                    deleteRegistrerView?.setQueryError()
+                }
+            }
+        }
     }
 
     fun setIdentificationEmptyError(){

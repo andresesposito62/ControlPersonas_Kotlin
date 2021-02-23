@@ -24,7 +24,7 @@ class DeleteRegistrerActivity : AppCompatActivity(), DeleteRegistrerView{
     override fun onCreate(savedIntanceState: Bundle?){
         super.onCreate(savedIntanceState)
         setContentView(R.layout.activity_delete_registrer)
-        //progressBar = findViewById<EditText>(R.id.progressbarReadRegistrer).text.toString()
+        progressBar = findViewById<ProgressBar>(R.id.progressBarDeleteRegistrer)
         editTextIdentification = findViewById<EditText>(R.id.editTextIEliminacionIdentificacion)
         presenter = DeleteRegistrerPresenter(this, DeleteRegistrerInteractor(), this)
     }
@@ -39,13 +39,9 @@ class DeleteRegistrerActivity : AppCompatActivity(), DeleteRegistrerView{
     }
 
 
-    override fun showProgress() {
-        Toast.makeText(this, "Prueba", Toast.LENGTH_SHORT).show()
-    }
+    override fun showProgress(){progressBar?.setVisibility(View.VISIBLE)}
 
-    override fun hideProgress() {
-        TODO("Not yet implemented")
-    }
+    override fun hideProgress(){progressBar?.setVisibility(View.GONE)}
 
     override fun setIdentificationError() {
         TODO("Not yet implemented")
@@ -59,7 +55,7 @@ class DeleteRegistrerActivity : AppCompatActivity(), DeleteRegistrerView{
         Toast.makeText(this, "Error en la consulta", Toast.LENGTH_SHORT).show()
     }
 
-    override fun setDates() {
+    override fun setSucces() {
         editTextIdentification?.setText("")
         editTextNames?.setText("")
         editTextSurnames?.setText("")

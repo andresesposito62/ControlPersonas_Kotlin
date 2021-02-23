@@ -26,7 +26,7 @@
     <EditText
         android:id="@+id/editTextRegistroIdentificacion"
         android:layout_width="300dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/hinteditTextVacio"
         android:importantForAutofill="no"
@@ -54,7 +54,7 @@
     <EditText
         android:id="@+id/editTextRegistroNombres"
         android:layout_width="300dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/hinteditTextVacio"
         android:importantForAutofill="no"
@@ -81,7 +81,7 @@
     <EditText
         android:id="@+id/editTextRegistroApellidos"
         android:layout_width="300dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/hinteditTextVacio"
         android:importantForAutofill="no"
@@ -108,7 +108,7 @@
     <EditText
         android:id="@+id/editTextRegistroTelefono"
         android:layout_width="300dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/hinteditTextVacio"
         android:importantForAutofill="no"
@@ -137,7 +137,7 @@
     <EditText
         android:id="@+id/editTextRegistroTemperatura"
         android:layout_width="300dp"
-        android:layout_height="30dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/hinteditTextVacio"
         android:importantForAutofill="no"
@@ -172,7 +172,7 @@
     <Button
         android:id="@+id/botonRegistrar"
         android:layout_width="300dp"
-        android:layout_height="20dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/button_rounded"
         android:gravity="center_horizontal|center_vertical"
         android:onClick="createRegistrer"
@@ -182,5 +182,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerRegistroRol" />
+
+    <FrameLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp">
+
+        <ProgressBar
+            android:id="@+id/progressBarCreateRegistrer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+    </FrameLayout>
 
 </LinearLayout>

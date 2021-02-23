@@ -6,21 +6,18 @@ import com.miapp.controlpersonas_kotlin.readregistrer.ImplementInterfaceReadData
 
 class DeleteRegistrerInteractor {
 
-    interface OnLoginFinishedListener{
-        fun onIdentificationError()
 
-        fun onSuccess()
-    }
+    fun queryToDataBase(persona: Persona, context: Context) : Boolean{
 
-    fun queryToDataBase(persona: Persona, listener: OnLoginFinishedListener, context: Context){
-
+        var status = false
         var implementsInterfaceDeleteFromDataBase = ImplementInterfaceDeleteDatabaseRegistrer()
         var  affectedRegistrers = implementsInterfaceDeleteFromDataBase.eliminarPersona(persona, context)
 
         if(affectedRegistrers!= -1L){
-            listener.onSuccess()
+            status = true
         }else{
-            listener.onIdentificationError()
+            status = false
         }
+        return status
     }
 }

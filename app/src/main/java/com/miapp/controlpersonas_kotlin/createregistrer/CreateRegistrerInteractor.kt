@@ -6,21 +6,16 @@ import com.miapp.controlpersonas_kotlin.readregistrer.ImplementInterfaceReadData
 
 class CreateRegistrerInteractor {
 
-    interface OnLoginFinishedListener{
-        fun onCreateRegistrerError()
-
-        fun onSuccess()
-    }
-
-    fun queryToDataBase(persona: Persona, listener: OnLoginFinishedListener, context: Context){
-
+    fun queryToDataBase(persona: Persona, context: Context): Boolean{
+        var status = false
         var implementInterfaceCreateDatabaseRegistrer = ImplementInterfaceCreateDatabaseRegistrer()
         var  affectedRegistrers = implementInterfaceCreateDatabaseRegistrer.registrarPersona(persona, context)
 
         if(affectedRegistrers!= -1L){
-            listener.onSuccess()
+            status = true
         }else{
-            listener.onCreateRegistrerError()
+            status = false
         }
+        return status
     }
 }
