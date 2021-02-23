@@ -12,11 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".actionselector.ActionSelectorActivity"/>
-        <activity android:name=".updateregistrer.UpdateRegistrerActivity"/>
-        <activity android:name=".deleteregistrer.DeleteRegistrerActivity"/>
-        <activity android:name=".readregistrer.ReadRegistrerActivity"/>
-        <activity android:name=".createregistrer.CreateRegistrerActivity"/>
-        <activity android:name=".login.LoginActivity">
+        <activity android:name=".updateregistrer.UpdateRegistrerActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".deleteregistrer.DeleteRegistrerActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".readregistrer.ReadRegistrerActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".createregistrer.CreateRegistrerActivity"
+                  android:screenOrientation="portrait"/>
+        <activity android:name=".login.LoginActivity"
+                  android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
