@@ -10,188 +10,153 @@
     android:orientation="vertical"
     tools:context=".createregistrer.CreateRegistrerActivity">
 
-    <TextView
-        android:id="@+id/textViewIdentificacion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/textViewIdentificacion"
-        android:textColor="#144359"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextRegistroIdentificacion"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/hinteditTextVacio"
-        android:importantForAutofill="no"
-        android:inputType="number"
-        android:text="@string/editTextRegistroIdentificacion"
-        android:textColor="#144359"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewIdentificacion" />
-
-    <TextView
-        android:id="@+id/textViewNombres"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textViewNombres"
-        android:textColor="#144359"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRegistroIdentificacion" />
-
-    <EditText
-        android:id="@+id/editTextRegistroNombres"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/hinteditTextVacio"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:text="@string/editTextRegistroNombres"
-        android:textColor="#144359"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNombres" />
-
-    <TextView
-        android:id="@+id/textViewApellidos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textViewApellidos"
-        android:textColor="#144359"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRegistroNombres" />
-
-    <EditText
-        android:id="@+id/editTextRegistroApellidos"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/hinteditTextVacio"
-        android:importantForAutofill="no"
-        android:inputType="textPersonName"
-        android:text="@string/editTextRegistroApellidos"
-        android:textColor="#144359"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewApellidos" />
-
-    <TextView
-        android:id="@+id/textViewTelefono"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textViewTelefono"
-        android:textColor="#144359"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRegistroApellidos" />
-
-    <EditText
-        android:id="@+id/editTextRegistroTelefono"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/hinteditTextVacio"
-        android:importantForAutofill="no"
-        android:inputType="phone"
-        android:text="@string/editTextRegistroTelefono"
-        android:textColor="#144359"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEliminar"
-        tools:text="@string/textViewTelefono" />
-
-    <TextView
-        android:id="@+id/textViewTemperatura"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textViewTemperatura"
-        android:textColor="#144359"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRegistroTelefono" />
-
-    <EditText
-        android:id="@+id/editTextRegistroTemperatura"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/hinteditTextVacio"
-        android:importantForAutofill="no"
-        android:inputType="numberDecimal"
-        android:textColor="#144359"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTemperatura"
-        tools:text="@string/editTextRegistroTemperatura" />
-
-    <TextView
-        android:id="@+id/textViewRol"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/textViewRol"
-        android:textColor="#144359"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRegistroTemperatura" />
-
-    <Spinner
-        android:id="@+id/spinnerRegistroRol"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewRol" />
-
-    <Button
-        android:id="@+id/botonRegistrar"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_rounded"
-        android:gravity="center_horizontal|center_vertical"
-        android:onClick="createRegistrer"
-        android:text="@string/botonCrearRegistro"
-        android:textColor="#d3e0ea"
-        app:backgroundTint="#144359"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerRegistroRol" />
 
     <FrameLayout
-        android:layout_width="50dp"
-        android:layout_height="50dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <ProgressBar
-            android:id="@+id/progressBarCreateRegistrer"
+        <ImageView
+            android:id="@+id/imageView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone" />
-    </FrameLayout>
+            android:alpha="0.5"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/loginimage" />
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/border_row"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/editTextRegistroIdentificacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:ems="10"
+                    android:hint="@string/identificationHint"
+                    android:importantForAutofill="no"
+                    android:inputType="number"
+                    android:text="@string/editTextRegistroIdentificacion"
+                    android:textColor="@color/Azul_Oscuro"
+                    android:textColorHint="@color/Azul_Oscuro"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewIdentificacion" />
+
+                <EditText
+                    android:id="@+id/editTextRegistroNombres"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:ems="10"
+                    android:hint="@string/namesHint"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:text="@string/editTextRegistroNombres"
+                    android:textColor="@color/Azul_Oscuro"
+                    android:textColorHint="@color/Azul_Oscuro"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewNombres" />
+
+                <EditText
+                    android:id="@+id/editTextRegistroApellidos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:ems="10"
+                    android:hint="@string/surnamesHint"
+                    android:importantForAutofill="no"
+                    android:inputType="textPersonName"
+                    android:text="@string/editTextRegistroApellidos"
+                    android:textColor="@color/Azul_Oscuro"
+                    android:textColorHint="@color/Azul_Oscuro"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewApellidos" />
+
+                <EditText
+                    android:id="@+id/editTextRegistroTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:ems="10"
+                    android:hint="@string/phoneHint"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:textColor="#144359"
+                    android:textColorHint="@color/Azul_Oscuro"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewTemperatura"
+                    tools:text="@string/editTextRegistroTemperatura" />
+
+                <EditText
+                    android:id="@+id/editTextRegistroTemperatura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:ems="10"
+                    android:hint="@string/temperatureHint"
+                    android:importantForAutofill="no"
+                    android:inputType="numberDecimal"
+                    android:textColor="#144359"
+                    android:textColorHint="@color/Azul_Oscuro"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewTemperatura"
+                    tools:text="@string/editTextRegistroTemperatura" />
+
+                <Spinner
+                    android:id="@+id/spinnerRegistroRol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewRol" />
+
+                <Button
+                    android:id="@+id/botonRegistrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button_rounded"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:onClick="createRegistrer"
+                    android:text="@string/botonCrearRegistro"
+                    android:textColor="#d3e0ea"
+                    app:backgroundTint="#144359"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerRegistroRol" />
+
+                <FrameLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp">
+
+                    <ProgressBar
+                        android:id="@+id/progressBarCreateRegistrer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
 </LinearLayout>

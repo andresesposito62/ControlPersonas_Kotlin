@@ -4,6 +4,11 @@
     <string name="hinteditTextIngreseIdentificacion">Ingrese identificacion</string>string>
     <string name="hintEmail">Correo Electrónico</string>
     <string name="hintPassword">Contraseña</string>
+    <string name="identificationHint">Número de identificación</string>
+    <string name="namesHint">Nombres</string>
+    <string name="surnamesHint">Apellidos</string>
+    <string name="phoneHint">Número de telefono</string>
+    <string name="temperatureHint">Temperatura registrada °C</string>
     <string name="editTextUsuario" />string>
     <string name="editTextPassword" />string>
     <string name="botonLogin">Iniciar Sesión</string>string>
@@ -32,24 +37,25 @@
     <string name="editTextRegistroIdentificacion" />string>
     <string name="editTextRegistroNombres" />string>
     <string name="editTextRegistroApellidos" />string>
-    <string name="editTextRegistroTelefono" />
-    <string name="editTextRegistroTemperatura" />
+    <string name="editTextRegistroTelefono" />string>
+    <string name="editTextRegistroTemperatura" />string>
     <string name="editTextConsultaIdentificacion" />string>
     <string name="editTextConsultaNombres" />string>
     <string name="editTextConsultaApellidos" />string>
-    <string name="editTextConsultaTelefono" />
-    <string name="editTextConsultaTemperatura" />
+    <string name="editTextConsultaTelefono" />string>
+    <string name="editTextConsultaTemperatura" />string>
     <string name="editTextActualizaIdentificacion" />string>
     <string name="editTextActualizaNombres" />string>
     <string name="editTextActualizaApellidos" />string>
-    <string name="editTextActualizaTelefono" />
-    <string name="editTextActualizaTemperatura" />
-    <string name="editTextEliminaIdentificacion" />
+    <string name="editTextActualizaTelefono" />string>
+    <string name="editTextActualizaTemperatura" />string>
+    <string name="editTextEliminaIdentificacion" />string>
     <string name="botonEliminar">Eliminar</string>string>
     <string name="botonRegistrar">Registrar</string>
     <string name="botonActualizar">Actualizar</string>
     <string name="botonConsultar">Consultar</string>
     <string name="progressBar" />
     <string name="imagen" />
+    <string name="textView" />
     <![CDATA[string>]]>
 </resources>

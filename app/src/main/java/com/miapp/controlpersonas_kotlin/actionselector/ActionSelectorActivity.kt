@@ -32,10 +32,10 @@ class ActionSelectorActivity : AppCompatActivity(), RecyclerAdapter.OnActionsCli
         findViewById<RecyclerView>(R.id.recyclerView).layoutManager = LinearLayoutManager(this)//sirve para mostrar los elementos del recicler view
         findViewById<RecyclerView>(R.id.recyclerView).addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
         val actionList : List<Action> = listOf(
-            Action("Crear registro","https://i.blogs.es/ea673c/boton_de_registro/450_1000.png"),
-            Action("Leer Registro", "https://www.lo-mejor.com/wp-content/uploads/2020/07/las-mejores-lupas.jpg"),
-            Action("Eliminar Registro", "https://www.trecebits.com/wp-content/uploads/2020/05/Borrar-cach%C3%A9-cookies-historial-del-navegador-800x445.jpg"),
-            Action("Actualizar Registro", "https://www.anoopcnair.com/wp-content/uploads/2017/11/Windows-10-1709-Fall-Creators-Update-with-Intune-Update-Rings2.jpg")
+            Action("Crear registro","https://elautonomodigital.es/wp-content/uploads/2020/11/Como-registrar-una-marca-o-nombre-comercial-para-tu-empresa.jpg"),
+            Action("Leer Registro", "https://www.iebschool.com/blog/wp-content/uploads/2019/09/que-es-digital-business.jpg"),
+            Action("Eliminar Registro", "https://www.sba.gov/assets/images/tensteps/plan.jpg"),
+            Action("Actualizar Registro", "https://www.elespectador.com/resizer/ibU37GjYXjJjshxv3glRqk2j26U=/657x0/cloudfront-us-east-1.images.arcpublishing.com/elespectador/DT2LC2UFGJCKBD63KBFSCJEBLQ.jpg")
         )
         findViewById<RecyclerView>(R.id.recyclerView).adapter = RecyclerAdapter(this, actionList, this)
     }
