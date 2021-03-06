@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.miapp.controlpersonas_kotlin.R
 import com.miapp.controlpersonas_kotlin.actionselector.ActionSelectorActivity
 
-class LoginActivity : AppCompatActivity(), LoginView {
+class LoginActivity : AppCompatActivity(), LoginPresenter.LoginInterface {
 
     private var progressBar : ProgressBar? = null
     private var presenter : LoginPresenter? = null

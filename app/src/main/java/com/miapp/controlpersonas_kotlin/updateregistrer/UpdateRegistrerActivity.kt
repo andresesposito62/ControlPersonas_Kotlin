@@ -7,10 +7,8 @@ import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.miapp.controlpersonas_kotlin.R
-import com.miapp.controlpersonas_kotlin.createregistrer.CreateRegistrerInteractor
-import com.miapp.controlpersonas_kotlin.createregistrer.CreateRegistrerPresenter
 
-class UpdateRegistrerActivity : AppCompatActivity(), UpdateRegistrerView{
+class UpdateRegistrerActivity : AppCompatActivity(), UpdateRegistrerPresenter.UpdateRegistrerInterface{
 
     private var progressBar : ProgressBar? = null
     private var presenter : UpdateRegistrerPresenter? = null

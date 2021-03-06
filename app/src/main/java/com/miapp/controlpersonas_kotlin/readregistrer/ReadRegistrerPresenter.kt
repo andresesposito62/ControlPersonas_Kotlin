@@ -1,28 +1,35 @@
 package com.miapp.controlpersonas_kotlin.readregistrer
 
 import android.content.Context
-import android.text.TextUtils
 import androidx.appcompat.app.AppCompatActivity
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.util.logging.Handler
-import kotlin.properties.Delegates
 
 class ReadRegistrerPresenter : AppCompatActivity {
 
-    private var readRegistrerView : ReadRegistrerView? = null
+    private var readRegistrerView : ReadRegistrerActivity? = null
     private var readRegistrerInteractor : ReadRegistrerInteractor//? = null
     private var context : Context
     private var person = Persona()
     private var statusQuery : Boolean? = null
 
 
-    constructor(readRegistrerView: ReadRegistrerView, readRegistrerInteractor: ReadRegistrerInteractor, context: Context){
-        this.readRegistrerView = readRegistrerView
+    constructor(readRegistrerActivity: ReadRegistrerActivity, readRegistrerInteractor: ReadRegistrerInteractor, context: Context){
+        this.readRegistrerView = readRegistrerActivity
         this.readRegistrerInteractor = readRegistrerInteractor
         this.context = context
+    }
+
+    interface ReadRegistrerInterface {
+        fun showProgress()
+        fun hideProgress()
+        fun setIdentificationError()
+        fun navigateToActionSelector()
+        fun setQueryError()
+        fun setDates(persona: Persona)
+        fun setIdentificationEmptyError()
     }
 
 

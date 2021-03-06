@@ -9,16 +9,26 @@ import kotlinx.coroutines.launch
 
 class DeleteRegistrerPresenter : AppCompatActivity {
 
-    private var deleteRegistrerView :DeleteRegistrerView? = null
+    private var deleteRegistrerView :DeleteRegistrerActivity? = null
     private var deleteRegistrerInteractor : DeleteRegistrerInteractor//? = null
     private var context : Context
     private var person = Persona()
 
 
-    constructor(deleteRegistrerView: DeleteRegistrerView, deleteRegistrerInteractor: DeleteRegistrerInteractor, context: Context){
+    constructor(deleteRegistrerView: DeleteRegistrerActivity, deleteRegistrerInteractor: DeleteRegistrerInteractor, context: Context){
         this.deleteRegistrerView = deleteRegistrerView
         this.deleteRegistrerInteractor = deleteRegistrerInteractor
         this.context = context
+    }
+
+    interface DeleteRegistrerInterface {
+        fun showProgress()
+        fun hideProgress()
+        fun setIdentificationError()
+        fun navigateToActionSelector()
+        fun setQueryError()
+        fun setSucces()
+        fun setIdentificationEmptyError()
     }
 
 

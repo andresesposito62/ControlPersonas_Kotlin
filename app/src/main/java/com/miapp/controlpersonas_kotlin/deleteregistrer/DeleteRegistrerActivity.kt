@@ -10,7 +10,7 @@ import com.miapp.controlpersonas_kotlin.R
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 import com.miapp.controlpersonas_kotlin.readregistrer.ReadRegistrerInteractor
 
-class DeleteRegistrerActivity : AppCompatActivity(), DeleteRegistrerView{
+class DeleteRegistrerActivity : AppCompatActivity(), DeleteRegistrerPresenter.DeleteRegistrerInterface{
 
     private var progressBar : ProgressBar? = null
     private var presenter : DeleteRegistrerPresenter? = null

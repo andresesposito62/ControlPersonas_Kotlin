@@ -8,16 +8,25 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class CreateRegistrerPresenter :AppCompatActivity {
-    private var createRegistrerView : CreateRegistrerView? = null
+    private var createRegistrerView : CreateRegistrerActivity? = null
     private var createRegistrerInteractor : CreateRegistrerInteractor//? = null
     private var context : Context
     private var person = Persona()
 
 
-    constructor(createRegistrerView: CreateRegistrerView, createRegistrerInteractor: CreateRegistrerInteractor, context: Context){
+    constructor(createRegistrerView: CreateRegistrerActivity, createRegistrerInteractor: CreateRegistrerInteractor, context: Context){
         this.createRegistrerView = createRegistrerView
         this.createRegistrerInteractor = createRegistrerInteractor
         this.context = context
+    }
+
+    interface CreateRegistrerInterface {
+        fun showProgress()
+        fun hideProgress()
+        fun navigateToActionSelector()
+        fun setQueryError()
+        fun setValuesEmptyError()
+        fun setSucces()
     }
 
     fun createRegistrer(identification : String, names : String, surnames : String, phone: String,

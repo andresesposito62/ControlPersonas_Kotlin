@@ -8,11 +8,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.miapp.controlpersonas_kotlin.R
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
-class ReadRegistrerActivity : AppCompatActivity(), ReadRegistrerView {
+class ReadRegistrerActivity : AppCompatActivity(), ReadRegistrerPresenter.ReadRegistrerInterface {
 
     private var progressBar : ProgressBar? = null
     private var presenter : ReadRegistrerPresenter? = null

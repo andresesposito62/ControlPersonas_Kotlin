@@ -2,24 +2,31 @@ package com.miapp.controlpersonas_kotlin.updateregistrer
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
-import com.miapp.controlpersonas_kotlin.createregistrer.CreateRegistrerInteractor
-import com.miapp.controlpersonas_kotlin.createregistrer.CreateRegistrerView
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class UpdateRegistrerPresenter : AppCompatActivity{
-    private var updateRegistrerView : UpdateRegistrerView? = null
+    private var updateRegistrerView : UpdateRegistrerActivity? = null
     private var updateRegistrerInteractor : UpdateRegistrerInteractor//? = null
     private var context : Context
     private var person = Persona()
 
 
-    constructor(updateRegistrerView: UpdateRegistrerView, updateRegistrerInteractor: UpdateRegistrerInteractor, context: Context){
+    constructor(updateRegistrerView: UpdateRegistrerActivity, updateRegistrerInteractor: UpdateRegistrerInteractor, context: Context){
         this.updateRegistrerView = updateRegistrerView
         this.updateRegistrerInteractor = updateRegistrerInteractor
         this.context = context
+    }
+
+    interface UpdateRegistrerInterface {
+        fun showProgress()
+        fun hideProgress()
+        fun navigateToActionSelector()
+        fun setQueryError()
+        fun setValuesEmptyError()
+        fun setSucces()
     }
 
     fun updateRegistrer(identification : String, names : String, surnames : String, phone: String,

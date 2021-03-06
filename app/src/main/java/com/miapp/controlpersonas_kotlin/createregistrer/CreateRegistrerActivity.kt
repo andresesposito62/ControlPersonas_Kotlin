@@ -11,7 +11,7 @@ import com.miapp.controlpersonas_kotlin.R
 import com.miapp.controlpersonas_kotlin.readregistrer.ReadRegistrerInteractor
 import com.miapp.controlpersonas_kotlin.readregistrer.ReadRegistrerPresenter
 
-class CreateRegistrerActivity : AppCompatActivity(), CreateRegistrerView {
+class CreateRegistrerActivity : AppCompatActivity(), CreateRegistrerPresenter.CreateRegistrerInterface{
 
     private var progressBar : ProgressBar? = null
     private var presenter : CreateRegistrerPresenter? = null
