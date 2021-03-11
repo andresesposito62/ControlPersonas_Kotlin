@@ -1,5 +1,7 @@
 package com.miapp.controlpersonas_kotlin.login
 
+import com.miapp.controlpersonas_kotlin.login.ui.LoginActivity
+
 class LoginPresenter : LoginInteractor.OnLoginFinishedListener {
 
     private var loginView: LoginActivity? = null
@@ -20,32 +22,33 @@ class LoginPresenter : LoginInteractor.OnLoginFinishedListener {
 
     fun validateCredentials(username: String, password: String){
         if(loginView != null){
-            loginView?.showProgress()
+            //loginView?.showProgress()
         }
         loginInteractor?.login(username, password, this)
     }
 
     fun onResume() {
         if (loginView!= null) {
-            loginView?.hideProgress()
+            //loginView?.hideProgress()
         }
     }
 
     override fun onUsernameError(){
         if(loginView != null){
-            loginView?.setUsernameError()
-            loginView?.hideProgress()
+            //loginView?.setUsernameError()
+            //loginView?.hideProgress()
         }
     }
 
     override fun onPasswordError(){
         if(loginView != null){
-            loginView?.setPasswordError()
-            loginView?.hideProgress()
+            //loginView?.setPasswordError()
+            //loginView?.hideProgress()
         }
     }
 
     override fun onSuccess(){
-        loginView?.navigateToHome()
+        //loginView?.navigateToHome()
     }
+
 }
