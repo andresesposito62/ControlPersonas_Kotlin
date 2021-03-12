@@ -1,16 +1,13 @@
 package com.miapp.controlpersonas_kotlin.login.viewmodel
 
-import android.content.Intent
-import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.Dispatchers
+import com.miapp.controlpersonas_kotlin.login.LoginInteractor
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
-class LoginViewModel : ViewModel() {
+class LoginViewModel() : ViewModel(), LoginInteractor.OnLoginFinishedListener {
 
     private val _progressVisibility = MutableLiveData<Boolean>()
     val progressVisibility : LiveData<Boolean> get() = _progressVisibility
@@ -18,6 +15,8 @@ class LoginViewModel : ViewModel() {
     var userEmail= ""
     var userPass = ""
 
+
+    private var loginInteractor =LoginInteractor()
 
     fun onButtonLoginClicked(){
         validateCredentials()
@@ -28,14 +27,32 @@ class LoginViewModel : ViewModel() {
     }
 
     private fun validateCredentials() {
+        _progressVisibility.value = true
         viewModelScope.launch{
 
-            /*_progressVisibility.value = true
-            _progressVisibility.value =withContext(Dispatchers.IO){
-                Thread.sleep(2000)
-                false
-            }!!*/
+            if(userEmail.isNotEmpty() && userPass.isNotEmpty()){
+
+                loginInteractor.login(userEmail, userPass,this@LoginViewModel)
+            }else{
+                setError()
+            }
         }
+    }
+
+    fun setError(){
+        _progressVisibility.value = false
+    }
+
+    override fun onUsernameError() {
+        _progressVisibility.value = false
+    }
+
+    override fun onPasswordError() {
+        _progressVisibility.value = false
+    }
+
+    override fun onSuccess() {
+        _progressVisibility.value = false
     }
 
 

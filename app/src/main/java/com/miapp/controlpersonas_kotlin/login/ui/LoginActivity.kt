@@ -2,14 +2,9 @@ package com.miapp.controlpersonas_kotlin.login.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.TextView
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
-import com.miapp.controlpersonas_kotlin.R
 import com.miapp.controlpersonas_kotlin.databinding.ActivityLoginBinding
-import com.miapp.controlpersonas_kotlin.login.LoginPresenter
 import com.miapp.controlpersonas_kotlin.login.viewmodel.LoginViewModel
 
 class LoginActivity : AppCompatActivity() {
