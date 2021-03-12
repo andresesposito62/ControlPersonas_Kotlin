@@ -19,6 +19,8 @@ class LoginViewModel : ViewModel() {
         validateCredentials()
     }
 
+
+
     fun getProgressVisibility() : MutableLiveData<Boolean>{
         return _progressVisibility
     }

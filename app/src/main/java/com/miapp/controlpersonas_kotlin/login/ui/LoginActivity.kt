@@ -26,19 +26,6 @@ class LoginActivity : AppCompatActivity() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
-
-        //Se crea el observer
-        val progressVisibilityObserver = Observer<Boolean>{
-            //Lo que este aca se ejecuta cada vez que hay un cambio en nuestro objeto livedata
-             //lo que se va arecibir es un it
-            if(it == true){
-                binding.progress.visibility = View.VISIBLE
-            }else{
-                binding.progress.visibility = View.GONE
-            }
-        }
-        //Subscripcion
-        viewModel.getProgressVisibility().observe(this@LoginActivity, progressVisibilityObserver)
     }
 
 }
