@@ -15,11 +15,13 @@ class LoginViewModel : ViewModel() {
     private val _progressVisibility = MutableLiveData<Boolean>()
     val progressVisibility : LiveData<Boolean> get() = _progressVisibility
 
+    var userEmail= ""
+    var userPass = ""
+
+
     fun onButtonLoginClicked(){
         validateCredentials()
     }
-
-
 
     fun getProgressVisibility() : MutableLiveData<Boolean>{
         return _progressVisibility
@@ -27,11 +29,12 @@ class LoginViewModel : ViewModel() {
 
     private fun validateCredentials() {
         viewModelScope.launch{
-            _progressVisibility.value = true
+
+            /*_progressVisibility.value = true
             _progressVisibility.value =withContext(Dispatchers.IO){
                 Thread.sleep(2000)
                 false
-            }!!
+            }!!*/
         }
     }
 
