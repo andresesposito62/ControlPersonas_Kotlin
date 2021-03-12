@@ -12,6 +12,9 @@ class LoginViewModel() : ViewModel(), LoginInteractor.OnLoginFinishedListener {
     private val _progressVisibility = MutableLiveData<Boolean>()
     val progressVisibility : LiveData<Boolean> get() = _progressVisibility
 
+    private val _setHomeView = MutableLiveData<Boolean>()
+    val setHomeView : LiveData<Boolean> get() = _setHomeView
+
     var userEmail= ""
     var userPass = ""
 
@@ -24,6 +27,10 @@ class LoginViewModel() : ViewModel(), LoginInteractor.OnLoginFinishedListener {
 
     fun getProgressVisibility() : MutableLiveData<Boolean>{
         return _progressVisibility
+    }
+
+    fun getSetHomeView() : MutableLiveData<Boolean>{
+        return _setHomeView
     }
 
     private fun validateCredentials() {
@@ -41,18 +48,22 @@ class LoginViewModel() : ViewModel(), LoginInteractor.OnLoginFinishedListener {
 
     fun setError(){
         _progressVisibility.value = false
+        _setHomeView.value = false
     }
 
     override fun onUsernameError() {
         _progressVisibility.value = false
+        _setHomeView.value = false
     }
 
     override fun onPasswordError() {
         _progressVisibility.value = false
+        _setHomeView.value = false
     }
 
     override fun onSuccess() {
         _progressVisibility.value = false
+        _setHomeView.value = true
     }
 
 
