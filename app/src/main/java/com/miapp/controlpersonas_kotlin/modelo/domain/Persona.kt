@@ -12,9 +12,11 @@ class Persona  {
     private var temperatura : String? = null
     private var rol : String? = null
 
-    fun Persona() {}
+    fun Persona(){
 
-    fun constructor(identificacion: String?, nombres: String?, apellidos: String?,
+    }
+
+    fun Persona(identificacion: String?, nombres: String?, apellidos: String?,
                 telefono: String?, temperatura: String?, rol: String?) {
         this.identificacion = identificacion
         this.nombres = nombres

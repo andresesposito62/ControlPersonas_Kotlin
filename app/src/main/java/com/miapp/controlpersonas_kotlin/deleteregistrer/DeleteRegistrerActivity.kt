@@ -7,8 +7,6 @@ import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.miapp.controlpersonas_kotlin.R
-import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
-import com.miapp.controlpersonas_kotlin.readregistrer.ReadRegistrerInteractor
 
 class DeleteRegistrerActivity : AppCompatActivity(), DeleteRegistrerPresenter.DeleteRegistrerInterface{
 

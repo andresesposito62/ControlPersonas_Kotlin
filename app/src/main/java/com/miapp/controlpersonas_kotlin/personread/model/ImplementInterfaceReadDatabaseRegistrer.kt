@@ -1,4 +1,4 @@
-package com.miapp.controlpersonas_kotlin.readregistrer
+package com.miapp.controlpersonas_kotlin.personread.model
 
 import android.content.Context
 import com.miapp.controlpersonas_kotlin.modelo.datos.AdminSQLiteOpenHelper

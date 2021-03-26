@@ -2,7 +2,6 @@ package com.miapp.controlpersonas_kotlin.createregistrer
 
 import android.content.Context
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
-import com.miapp.controlpersonas_kotlin.readregistrer.ImplementInterfaceReadDatabaseRegistrer
 
 class CreateRegistrerInteractor {
 

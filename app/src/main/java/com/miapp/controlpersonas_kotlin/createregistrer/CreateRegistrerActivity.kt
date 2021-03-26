@@ -1,15 +1,12 @@
 package com.miapp.controlpersonas_kotlin.createregistrer
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.view.View
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.miapp.controlpersonas_kotlin.R
-import com.miapp.controlpersonas_kotlin.readregistrer.ReadRegistrerInteractor
-import com.miapp.controlpersonas_kotlin.readregistrer.ReadRegistrerPresenter
 
 class CreateRegistrerActivity : AppCompatActivity(), CreateRegistrerPresenter.CreateRegistrerInterface{
 

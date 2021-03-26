@@ -8,12 +8,12 @@ import androidx.appcompat.app.AppCompatActivity
 import com.miapp.controlpersonas_kotlin.R
 import com.miapp.controlpersonas_kotlin.createregistrer.CreateRegistrerActivity
 import com.miapp.controlpersonas_kotlin.deleteregistrer.DeleteRegistrerActivity
-import com.miapp.controlpersonas_kotlin.readregistrer.ReadRegistrerActivity
 import com.miapp.controlpersonas_kotlin.updateregistrer.UpdateRegistrerActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.miapp.controlpersonas_kotlin.actionselector.model.Action
+import com.miapp.controlpersonas_kotlin.personread.view.PersonReadActivity
 
 class ActionSelectorActivity : AppCompatActivity(), RecyclerAdapter.OnActionsClickListener, ActionSelectorView{
 
@@ -85,7 +85,7 @@ class ActionSelectorActivity : AppCompatActivity(), RecyclerAdapter.OnActionsCli
     }
 
     override fun navigateToReadRegistrer(){
-        val intent = Intent(this, ReadRegistrerActivity::class.java)
+        val intent = Intent(this, PersonReadActivity::class.java)
         startActivity(intent)
     }
 
