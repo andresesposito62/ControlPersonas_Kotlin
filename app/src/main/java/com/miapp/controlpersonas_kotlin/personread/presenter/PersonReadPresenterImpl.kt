@@ -11,10 +11,24 @@ class PersonReadPresenterImpl(var personReadView: PersonReadView) : PersonReadPr
     private var personaReadInteractor : PersonReadInteractor = PersonReadInteractorImpl(this)
 
     override fun showPersonRead(person : Persona?) {
-        personReadView.showPersonRead(person)
+        if (!person?.getIdentificacion().toString().isNullOrEmpty() &&
+            !person?.getNombres().toString().isNullOrEmpty() &&
+            !person?.getApellidos().toString().isNullOrEmpty() &&
+            !person?.getTelefono().toString().isNullOrEmpty() &&
+            !person?.getTemperatura().toString().isNullOrEmpty() &&
+            !person?.getRol().toString().isNullOrEmpty()) {
+
+                personReadView.showPersonRead(person)
+        }else{
+            personReadView.setQueryError()
+        }
     }
 
     override fun getPersonRead(person : Persona?, context: Context) {
-        personaReadInteractor.getPersonReadDB(person, context)
+        if(!person?.getIdentificacion().isNullOrEmpty()){
+            personaReadInteractor.getPersonReadDB(person, context)
+        }else{
+            personReadView.setIdentificationError()
+        }
     }
 }

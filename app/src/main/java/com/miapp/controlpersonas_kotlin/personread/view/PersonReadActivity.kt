@@ -44,19 +44,18 @@ class PersonReadActivity : AppCompatActivity(), PersonReadView {
     }
 
     override fun showPersonRead(person: Persona?) {
-        //Toast.makeText(this, person?.toString(), Toast.LENGTH_SHORT).show()
-        editTextIdentification?.setText(person?.getIdentificacion().toString())
-        editTextNames?.setText(person?.getNombres().toString())
-        editTextSurnames?.setText(person?.getApellidos().toString())
-        editTextPhone?.setText(person?.getTelefono().toString())
-        editTextTemperature?.setText(person?.getTemperatura().toString())
+            editTextIdentification?.setText(person?.getIdentificacion().toString())
+            editTextNames?.setText(person?.getNombres().toString())
+            editTextSurnames?.setText(person?.getApellidos().toString())
+            editTextPhone?.setText(person?.getTelefono().toString())
+            editTextTemperature?.setText(person?.getTemperatura().toString())
     }
 
     override fun setQueryError() {
-        TODO("Not yet implemented")
+        Toast.makeText(this, "Error en la consulta", Toast.LENGTH_SHORT).show()
     }
 
     override fun setIdentificationError() {
-        TODO("Not yet implemented")
+        Toast.makeText(this, "Debes diligenciar el número de identificación", Toast.LENGTH_SHORT).show()
     }
 }
