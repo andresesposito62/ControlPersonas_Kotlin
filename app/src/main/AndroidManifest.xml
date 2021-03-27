@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".personread.view.PersonReadActivity"></activity>
+        <activity android:name=".createregistrer.view.PersonCreateActivity"></activity>
+        <activity android:name=".personread.view.PersonReadActivity" />
         <activity android:name=".actionselector.ActionSelectorActivity" />
         <activity
             android:name=".updateregistrer.UpdateRegistrerActivity"

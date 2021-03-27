@@ -1,8 +1,6 @@
 package com.miapp.controlpersonas_kotlin.personread.model
 
 import android.content.Context
-import com.miapp.controlpersonas_kotlin.createregistrer.ImplementInterfaceCreateDatabaseRegistrer
-import com.miapp.controlpersonas_kotlin.modelo.datos.InterfaceReadDatabaseRegistrer
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 import com.miapp.controlpersonas_kotlin.personread.presenter.PersonReadPresenter
 

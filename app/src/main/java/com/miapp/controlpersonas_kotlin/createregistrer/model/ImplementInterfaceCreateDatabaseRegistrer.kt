@@ -1,4 +1,4 @@
-package com.miapp.controlpersonas_kotlin.createregistrer
+package com.miapp.controlpersonas_kotlin.createregistrer.model
 
 import android.content.ContentValues
 import android.content.Context
