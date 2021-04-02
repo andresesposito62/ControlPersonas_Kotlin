@@ -7,13 +7,13 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.miapp.controlpersonas_kotlin.R
 import com.miapp.controlpersonas_kotlin.deleteregistrer.DeleteRegistrerActivity
-import com.miapp.controlpersonas_kotlin.updateregistrer.UpdateRegistrerActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.miapp.controlpersonas_kotlin.actionselector.model.Action
 import com.miapp.controlpersonas_kotlin.createregistrer.view.PersonCreateActivity
 import com.miapp.controlpersonas_kotlin.personread.view.PersonReadActivity
+import com.miapp.controlpersonas_kotlin.updateregistrer.view.PersonUpdateActivity
 
 class ActionSelectorActivity : AppCompatActivity(), RecyclerAdapter.OnActionsClickListener, ActionSelectorView{
 
@@ -90,7 +90,7 @@ class ActionSelectorActivity : AppCompatActivity(), RecyclerAdapter.OnActionsCli
     }
 
     override fun navigateToUpdateRegistrer(){
-        val intent = Intent(this, UpdateRegistrerActivity::class.java)
+        val intent = Intent(this, PersonUpdateActivity::class.java)
         startActivity(intent)
     }
     override fun navigateToDeleteRegistrer(){
