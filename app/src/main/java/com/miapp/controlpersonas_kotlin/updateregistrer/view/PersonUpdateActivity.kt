@@ -9,12 +9,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import com.miapp.controlpersonas_kotlin.R
+import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 import com.miapp.controlpersonas_kotlin.updateregistrer.viewmodel.PersonUpdateViewModel
 
 class PersonUpdateActivity : AppCompatActivity() {
 
     private var viewModel: PersonUpdateViewModel? = null
-    var mockStatusQuery = false
+    var personUi: Persona? = Persona()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,23 +28,22 @@ class PersonUpdateActivity : AppCompatActivity() {
     private fun observeViewModel() {
         viewModel?.getStatusQuery()?.observe(this, Observer<Boolean>{
             if(it){
-                Toast.makeText(this, "Consulta Exitosa", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Actualizacion de datos Exitosa", Toast.LENGTH_SHORT).show()
             }else{
-                Toast.makeText(this, "Error en la consulta", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Error en la actualizacion", Toast.LENGTH_SHORT).show()
             }
         })
     }
 
     private fun onButtonClick() {
         findViewById<Button>(R.id.botonActualizar).setOnClickListener {
-            //viewModel.
-            if(mockStatusQuery){
-                viewModel?.querySuccess()
-                mockStatusQuery = false
-            }else{
-                viewModel?.queryFailed()
-                mockStatusQuery = true
-            }
+            personUi?.setIdentificacion(findViewById<EditText>(R.id.editTextActualizacionIdentificacion).text.toString().trim())
+            personUi?.setNombres(findViewById<EditText>(R.id.editTextActualizacionNombres).text.toString().trim())
+            personUi?.setApellidos(findViewById<EditText>(R.id.editTextActualizacionApellidos).text.toString().trim())
+            personUi?.setTelefono(findViewById<EditText>(R.id.editTextActualizacionTelefono).text.toString().trim())
+            personUi?.setTemperatura(findViewById<EditText>(R.id.editTextActualizacionTemperatura).text.toString().trim())
+            personUi?.setRol("Partner")
+            viewModel?.setPersonUpdate(personUi, this)
         }
     }
 }
