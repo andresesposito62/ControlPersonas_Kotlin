@@ -9,20 +9,26 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import com.miapp.controlpersonas_kotlin.R
+import com.miapp.controlpersonas_kotlin.databinding.ActivityPersonUpdateBinding
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 import com.miapp.controlpersonas_kotlin.updateregistrer.viewmodel.PersonUpdateViewModel
 
 class PersonUpdateActivity : AppCompatActivity() {
 
-    private var viewModel: PersonUpdateViewModel? = null
-    var personUi: Persona? = Persona()
+    private lateinit var viewModel: PersonUpdateViewModel
+    private var personUi: Persona? = Persona()
+    private lateinit var binding : ActivityPersonUpdateBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_person_update)
+
+        binding = ActivityPersonUpdateBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         viewModel = ViewModelProvider(this).get()
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = this
         observeViewModel()
-        onButtonClick()
     }
 
     private fun observeViewModel() {
@@ -33,17 +39,28 @@ class PersonUpdateActivity : AppCompatActivity() {
                 Toast.makeText(this, "Error en la actualizacion", Toast.LENGTH_SHORT).show()
             }
         })
-    }
 
-    private fun onButtonClick() {
-        findViewById<Button>(R.id.botonActualizar).setOnClickListener {
-            personUi?.setIdentificacion(findViewById<EditText>(R.id.editTextActualizacionIdentificacion).text.toString().trim())
-            personUi?.setNombres(findViewById<EditText>(R.id.editTextActualizacionNombres).text.toString().trim())
-            personUi?.setApellidos(findViewById<EditText>(R.id.editTextActualizacionApellidos).text.toString().trim())
-            personUi?.setTelefono(findViewById<EditText>(R.id.editTextActualizacionTelefono).text.toString().trim())
-            personUi?.setTemperatura(findViewById<EditText>(R.id.editTextActualizacionTemperatura).text.toString().trim())
-            personUi?.setRol("Partner")
-            viewModel?.setPersonUpdate(personUi, this)
-        }
+        viewModel?.getInitQuery()?.observe(this, Observer<Boolean>{
+            if(it){
+                if(binding.editTextActualizacionNombres.text.isNotEmpty()&&
+                        binding.editTextActualizacionApellidos.text.isNotEmpty()&&
+                        binding.editTextActualizacionIdentificacion.text.isNotEmpty()&&
+                        binding.editTextActualizacionTelefono.text.isNotEmpty()&&
+                        binding.editTextActualizacionTemperatura.text.isNotEmpty()){
+
+                    personUi?.setIdentificacion(binding.editTextActualizacionIdentificacion.text.toString().trim())
+                    personUi?.setNombres(binding.editTextActualizacionNombres.text.toString().trim())
+                    personUi?.setApellidos(binding.editTextActualizacionApellidos.text.toString().trim())
+                    personUi?.setTelefono(binding.editTextActualizacionTelefono.text.toString().trim())
+                    personUi?.setTemperatura(binding.editTextActualizacionTemperatura.text.toString().trim())
+                    personUi?.setRol("Partner")
+                    //Toast.makeText(this, personUi.toString(), Toast.LENGTH_SHORT).show()
+                    viewModel?.setPersonUpdate(personUi, this)
+                }else{
+                    Toast.makeText(this, "Debes diligenciar todos los campos!", Toast.LENGTH_SHORT).show()
+                }
+                viewModel.endQuery()
+            }
+        })
     }
 }
