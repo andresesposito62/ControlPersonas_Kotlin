@@ -11,6 +11,10 @@ import androidx.lifecycle.get
 import com.miapp.controlpersonas_kotlin.R
 import com.miapp.controlpersonas_kotlin.databinding.ActivityPersonUpdateBinding
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
+import com.miapp.controlpersonas_kotlin.updateregistrer.model.MessageFactory
+import com.miapp.controlpersonas_kotlin.updateregistrer.model.MessageFactory.Companion.TYPE_DATA_EMPTY
+import com.miapp.controlpersonas_kotlin.updateregistrer.model.MessageFactory.Companion.TYPE_ERROR
+import com.miapp.controlpersonas_kotlin.updateregistrer.model.MessageFactory.Companion.TYPE_SUCCESS
 import com.miapp.controlpersonas_kotlin.updateregistrer.viewmodel.PersonUpdateViewModel
 
 class PersonUpdateActivity : AppCompatActivity() {
@@ -34,9 +38,11 @@ class PersonUpdateActivity : AppCompatActivity() {
     private fun observeViewModel() {
         viewModel?.getStatusQuery()?.observe(this, Observer<Boolean>{
             if(it){
-                Toast.makeText(this, "Actualizacion de datos Exitosa", Toast.LENGTH_SHORT).show()
+                val messageFactory = MessageFactory()
+                messageFactory.getMessage(this, TYPE_SUCCESS).show()
             }else{
-                Toast.makeText(this, "Error en la actualizacion", Toast.LENGTH_SHORT).show()
+                val messageFactory = MessageFactory()
+                messageFactory.getMessage(this, TYPE_ERROR).show()
             }
         })
 
@@ -57,7 +63,8 @@ class PersonUpdateActivity : AppCompatActivity() {
                     //Toast.makeText(this, personUi.toString(), Toast.LENGTH_SHORT).show()
                     viewModel?.setPersonUpdate(personUi, this)
                 }else{
-                    Toast.makeText(this, "Debes diligenciar todos los campos!", Toast.LENGTH_SHORT).show()
+                    val messageFactory = MessageFactory()
+                    messageFactory.getMessage(this, TYPE_DATA_EMPTY).show()
                 }
                 viewModel.endQuery()
             }
