@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import com.miapp.controlpersonas_kotlin.R
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 import com.miapp.controlpersonas_kotlin.personread.presenter.PersonReadPresenter
@@ -37,18 +38,24 @@ class PersonReadActivity : AppCompatActivity(), PersonReadView {
             getPersonRead(personUi)
         }
         personReadPresenter = PersonReadPresenterImpl(this)
+
+        showPersonRead()
     }
+
 
     override fun getPersonRead(person: Persona?) {
         personReadPresenter?.getPersonRead(personUi, this)
     }
 
-    override fun showPersonRead(person: Persona?) {
-            editTextIdentification?.setText(person?.getIdentificacion().toString())
-            editTextNames?.setText(person?.getNombres().toString())
-            editTextSurnames?.setText(person?.getApellidos().toString())
-            editTextPhone?.setText(person?.getTelefono().toString())
-            editTextTemperature?.setText(person?.getTemperatura().toString())
+    override fun showPersonRead() {
+        personReadPresenter?.getPersonReadLiveData()?.observe(this, Observer<Persona?>{
+            editTextIdentification?.setText(it?.getIdentificacion().toString())
+            editTextNames?.setText(it?.getNombres().toString())
+            editTextSurnames?.setText(it?.getApellidos().toString())
+            editTextPhone?.setText(it?.getTelefono().toString())
+            editTextTemperature?.setText(it?.getTemperatura().toString())
+        })
+
     }
 
     override fun setQueryError() {

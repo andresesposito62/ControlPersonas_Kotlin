@@ -1,6 +1,5 @@
-package com.miapp.controlpersonas_kotlin.updateregistrer.model
+package com.miapp.controlpersonas_kotlin.factory
 
-import android.app.AlertDialog
 import android.content.Context
 import android.widget.Toast
 
@@ -21,7 +20,7 @@ class MessageFactory {
                 return Toast.makeText(context, "Solicitud realizada satisfactoriamente!", Toast.LENGTH_SHORT)
             }
             TYPE_DATA_EMPTY ->{
-                return Toast.makeText(context, "Debes diligenciar los campos vacios!", Toast.LENGTH_SHORT)
+                return Toast.makeText(context, "Debes diligenciar los campos obligatorios!", Toast.LENGTH_SHORT)
             }
         }
         return  Toast.makeText(context, "Tipo desconocido", Toast.LENGTH_SHORT)//AlertDialog.Builder(context).setMessage("Necesitas añadir el nuevo tipo")

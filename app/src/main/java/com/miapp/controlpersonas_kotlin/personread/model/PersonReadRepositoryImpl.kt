@@ -20,6 +20,8 @@ class PersonReadRepositoryImpl (var personReadPresenter: PersonReadPresenter): P
         }catch (e : NullPointerException){}
         finally {
             personReadPresenter.showPersonRead(personResult)
+            //val personReadObservable = PersonReadObservable()
+            //personReadObservable.changePersonRead(personResult)
         }
     }
 }

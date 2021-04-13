@@ -2,19 +2,15 @@ package com.miapp.controlpersonas_kotlin.updateregistrer.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
-import com.miapp.controlpersonas_kotlin.R
 import com.miapp.controlpersonas_kotlin.databinding.ActivityPersonUpdateBinding
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
-import com.miapp.controlpersonas_kotlin.updateregistrer.model.MessageFactory
-import com.miapp.controlpersonas_kotlin.updateregistrer.model.MessageFactory.Companion.TYPE_DATA_EMPTY
-import com.miapp.controlpersonas_kotlin.updateregistrer.model.MessageFactory.Companion.TYPE_ERROR
-import com.miapp.controlpersonas_kotlin.updateregistrer.model.MessageFactory.Companion.TYPE_SUCCESS
+import com.miapp.controlpersonas_kotlin.factory.MessageFactory
+import com.miapp.controlpersonas_kotlin.factory.MessageFactory.Companion.TYPE_DATA_EMPTY
+import com.miapp.controlpersonas_kotlin.factory.MessageFactory.Companion.TYPE_ERROR
+import com.miapp.controlpersonas_kotlin.factory.MessageFactory.Companion.TYPE_SUCCESS
 import com.miapp.controlpersonas_kotlin.updateregistrer.viewmodel.PersonUpdateViewModel
 
 class PersonUpdateActivity : AppCompatActivity() {
