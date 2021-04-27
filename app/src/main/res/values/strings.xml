@@ -57,5 +57,7 @@
     <string name="progressBar" />
     <string name="imagen" />
     <string name="textView" />
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <![CDATA[string>]]>
 </resources>
