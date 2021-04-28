@@ -62,5 +62,6 @@
     <string name="navToHome">Inicio</string>
     <string name="navToFacebook">Facebook</string>
     <string name="navToTwitter">Twitter</string>
+    <string name="textTitle">ingresApp</string>
     <![CDATA[string>]]>
 </resources>
