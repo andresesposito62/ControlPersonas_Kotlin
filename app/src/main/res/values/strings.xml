@@ -63,5 +63,10 @@
     <string name="navToFacebook">Facebook</string>
     <string name="navToTwitter">Twitter</string>
     <string name="textTitle">ingresApp</string>
+    <string name="navToReadPerson">Leer datos de una persona</string>
+    <string name="navToRegisterPerson">Registrar una nueva persona</string>
+    <string name="navToUpdatePerson">Actualizar datos de una persona registrada</string>
+    <string name="navToDeletePerson">Borrar datos de una persona registrada</string>
+    <string name="navToExportData">Exportar datos almacenados</string>
     <![CDATA[string>]]>
 </resources>
