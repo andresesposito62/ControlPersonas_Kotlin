@@ -69,5 +69,4 @@
             app:menu="@menu/btn_menu"/>
 
     </RelativeLayout>
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
