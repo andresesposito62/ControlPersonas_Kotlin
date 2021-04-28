@@ -2,6 +2,7 @@
 <resources>
     <color name="Azul_Oscuro">#144359</color>
     <color name="Azul_Claro">#d3e0ea</color>
+    <color name="Rojo">#cf0000</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>

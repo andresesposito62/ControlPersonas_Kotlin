@@ -41,7 +41,6 @@
                 android:layout_marginRight="@dimen/margin"
                 android:layout_alignParentRight="true"
                 android:background="@color/Azul_Oscuro"/>
-
             
         </RelativeLayout>
         
@@ -49,7 +48,22 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/tamanioAppBar"
+        android:background="@color/white">
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tamanioSpinner"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/tamanioSpinner"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <fragment
@@ -66,8 +80,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            app:itemIconSize="@dimen/tamanioIcons"
             android:background="@color/Azul_Oscuro"
-            app:menu="@menu/btn_menu"/>
+            app:itemTextColor="@color/white"
+            app:menu="@menu/btn_menu" />
 
     </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
