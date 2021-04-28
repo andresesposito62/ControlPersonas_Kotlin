@@ -3,13 +3,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".home.HomeFragment"
-    android:background="@color/Azul_Claro">
+    android:background="@color/white">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home Fragment" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_parrafo"
+                cardCornerRadius="@dimen/cardCornerRadius"
+                app:cardElevation="4dp"
+                android:layout_margin="@dimen/margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_parrafo"
+                    android:padding="@dimen/margin">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/tamanioCardViewImages"
+                        android:src="@drawable/loginimage"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loremIpsum"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_parrafo"
+                cardCornerRadius="@dimen/cardCornerRadius"
+                app:cardElevation="4dp"
+                android:layout_margin="@dimen/margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_parrafo"
+                    android:padding="@dimen/margin">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/tamanioCardViewImages"
+                        android:src="@drawable/loginimage"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loremIpsum"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </FrameLayout>

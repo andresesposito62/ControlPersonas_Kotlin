@@ -5,4 +5,6 @@
     <dimen name="tamanioAppBar">70dp</dimen>
     <dimen name="tamanioSpinner">20dp</dimen>
     <dimen name="margin">20dp</dimen>
+    <dimen name="cardCornerRadius">10dp</dimen>
+    <dimen name="tamanioCardViewImages">200dp</dimen>
 </resources>

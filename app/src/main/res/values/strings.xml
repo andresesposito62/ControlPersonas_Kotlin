@@ -68,5 +68,6 @@
     <string name="navToUpdatePerson">Actualizar datos de una persona registrada</string>
     <string name="navToDeletePerson">Borrar datos de una persona registrada</string>
     <string name="navToExportData">Exportar datos almacenados</string>
+    <string name="loremIpsum">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</string>
     <![CDATA[string>]]>
 </resources>
