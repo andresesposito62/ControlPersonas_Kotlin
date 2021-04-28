@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tamanioTitulo">20sp</dimen>
+    <dimen name="tamanioSubtitulo">10sp</dimen>
+    <dimen name="tamanioAppBar">70sp</dimen>
+    <dimen name="margin">20dp</dimen>
+</resources>
