@@ -59,5 +59,8 @@
     <string name="textView" />
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navToHome">Inicio</string>
+    <string name="navToFacebook">Facebook</string>
+    <string name="navToTwitter">Twitter</string>
     <![CDATA[string>]]>
 </resources>

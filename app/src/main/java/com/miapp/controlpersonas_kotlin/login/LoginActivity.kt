@@ -8,6 +8,7 @@ import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import com.miapp.controlpersonas_kotlin.R
 import com.miapp.controlpersonas_kotlin.actionselector.ActionSelectorActivity
+import com.miapp.controlpersonas_kotlin.home.HomeActivity
 
 class LoginActivity : AppCompatActivity(), LoginPresenter.LoginInterface {
 
@@ -41,7 +42,8 @@ class LoginActivity : AppCompatActivity(), LoginPresenter.LoginInterface {
     override fun setPasswordError(){password!!.setError("Nombre de usuario no puede estar vacio")}
 
     override fun navigateToHome(){
-        val intent = Intent(this, ActionSelectorActivity::class.java)
+        //val intent = Intent(this, ActionSelectorActivity::class.java)
+        val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)}
 
     private fun validateCredentials(){
