@@ -54,10 +54,9 @@
 
         <Spinner
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/tamanioSpinner"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/margin"
-            />
+            android:layout_marginRight="@dimen/margin"/>
 
     </RelativeLayout>
 
@@ -81,9 +80,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            app:itemIconSize="@dimen/tamanioIcons"
             android:background="@color/Azul_Oscuro"
-            app:itemTextColor="@color/Azul_Claro"
-            app:menu="@menu/btn_menu"/>
+            app:itemTextColor="@color/white"
+            app:menu="@menu/btn_menu" />
 
     </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -21,7 +21,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape_parrafo"
                 cardCornerRadius="@dimen/cardCornerRadius"
-                app:cardElevation="4dp"
+                app:cardElevation="@dimen/cardElevation"
                 android:layout_margin="@dimen/margin">
 
                 <LinearLayout
@@ -50,7 +50,36 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape_parrafo"
                 cardCornerRadius="@dimen/cardCornerRadius"
-                app:cardElevation="4dp"
+                app:cardElevation="@dimen/cardElevation"
+                android:layout_margin="@dimen/margin">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@drawable/shape_parrafo"
+                    android:padding="@dimen/margin">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/tamanioCardViewImages"
+                        android:src="@drawable/loginimage"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loremIpsum"/>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_parrafo"
+                cardCornerRadius="@dimen/cardCornerRadius"
+                app:cardElevation="@dimen/cardElevation"
                 android:layout_margin="@dimen/margin">
 
                 <LinearLayout
