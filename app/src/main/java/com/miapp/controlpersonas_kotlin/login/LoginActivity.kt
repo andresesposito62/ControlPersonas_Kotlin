@@ -7,8 +7,7 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import com.miapp.controlpersonas_kotlin.R
-import com.miapp.controlpersonas_kotlin.actionselector.ActionSelectorActivity
-import com.miapp.controlpersonas_kotlin.home.HomeActivity
+import com.miapp.controlpersonas_kotlin.home.view.HomeActivity
 
 class LoginActivity : AppCompatActivity(), LoginPresenter.LoginInterface {
 

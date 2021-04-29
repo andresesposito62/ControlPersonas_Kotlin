@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".home.HomeActivity"></activity>
+        <activity android:name=".home.view.HomeActivity"></activity>
         <activity android:name=".updateregistrer.view.PersonUpdateActivity" />
         <activity android:name=".createregistrer.view.PersonCreateActivity" />
         <activity android:name=".personread.view.PersonReadActivity" />
