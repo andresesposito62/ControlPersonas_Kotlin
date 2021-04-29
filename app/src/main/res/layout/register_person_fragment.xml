@@ -5,9 +5,138 @@
     android:layout_height="match_parent"
     tools:context=".home.registerperson.RegisterPersonFragment">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="RegisterPersonFragment" />
+        android:background="#d3e0ea"
+        android:gravity="center"
+        android:orientation="vertical">
 
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:scaleType="centerCrop"
+                android:src="@drawable/loginimage" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_row"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextRegistroIdentificacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:ems="10"
+                        android:hint="@string/identificationHint"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:text="@string/editTextRegistroIdentificacion"
+                        android:textColor="@color/Azul_Oscuro"
+                        android:textColorHint="@color/Azul_Oscuro"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextRegistroNombres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:ems="10"
+                        android:hint="@string/namesHint"
+                        android:importantForAutofill="no"
+                        android:inputType="textPersonName"
+                        android:text="@string/editTextRegistroNombres"
+                        android:textColor="@color/Azul_Oscuro"
+                        android:textColorHint="@color/Azul_Oscuro"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextRegistroApellidos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:ems="10"
+                        android:hint="@string/surnamesHint"
+                        android:importantForAutofill="no"
+                        android:inputType="textPersonName"
+                        android:text="@string/editTextRegistroApellidos"
+                        android:textColor="@color/Azul_Oscuro"
+                        android:textColorHint="@color/Azul_Oscuro"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/editTextRegistroTelefono"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:ems="10"
+                        android:hint="@string/phoneHint"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:textColor="#144359"
+                        android:textColorHint="@color/Azul_Oscuro"
+                        android:textSize="18sp"
+                        tools:text="@string/editTextRegistroTemperatura" />
+
+                    <EditText
+                        android:id="@+id/editTextRegistroTemperatura"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:ems="10"
+                        android:hint="@string/temperatureHint"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:textColor="#144359"
+                        android:textColorHint="@color/Azul_Oscuro"
+                        android:textSize="18sp"
+                        tools:text="@string/editTextRegistroTemperatura" />
+
+                    <Spinner
+                        android:id="@+id/spinnerRegistroRol"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp" />
+
+                    <Button
+                        android:id="@+id/botonRegistrar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_rounded"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="@string/botonCrearRegistro"
+                        android:textColor="#d3e0ea"
+                        android:backgroundTint="#144359"/>
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarCreateRegistrer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
 </FrameLayout>
