@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="options_spinner">
+        <item>@string/selection_action_item</item>
+        <item>@string/nav_to_register_person_item</item>
+        <item>@string/nav_to_read_person_item</item>
+        <item>@string/nav_to_update_person_item</item>
+        <item>@string/nav_to_delete_person_item</item>
+        <item>@string/nav_to_export_data_item</item>
+    </string-array>
+</resources>

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.miapp.controlpersonas_kotlin.home.HomeFragment"
+        android:name="com.miapp.controlpersonas_kotlin.home.view.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_homeFragment_to_updatePersonFragment2"
             app:destination="@id/updatePersonFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_exportDataFragment"
+            app:destination="@id/exportDataFragment" />
     </fragment>
     <fragment
         android:id="@+id/deletePersonFragment"
@@ -43,4 +46,9 @@
         android:name="com.miapp.controlpersonas_kotlin.home.updateperson.UpdatePersonFragment"
         android:label="update_person_fragment"
         tools:layout="@layout/update_person_fragment" />
+    <fragment
+        android:id="@+id/exportDataFragment"
+        android:name="com.miapp.controlpersonas_kotlin.home.exportdata.ExportDataFragment"
+        android:label="export_data_fragment"
+        tools:layout="@layout/export_data_fragment" />
 </navigation>

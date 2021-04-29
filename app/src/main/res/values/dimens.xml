@@ -3,7 +3,7 @@
     <dimen name="tamanioTitulo">20sp</dimen>
     <dimen name="tamanioSubtitulo">10sp</dimen>
     <dimen name="tamanioAppBar">70dp</dimen>
-    <dimen name="tamanioSpinner">30dp</dimen>
+    <dimen name="tamanioSpinner">50dp</dimen>
     <dimen name="margin">20dp</dimen>
     <dimen name="cardCornerRadius">10dp</dimen>
     <dimen name="cardElevation">4dp</dimen>
