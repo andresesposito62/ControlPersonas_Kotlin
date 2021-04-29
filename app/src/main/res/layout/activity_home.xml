@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+         <variable
+             name="viewModel"
+             type="com.miapp.controlpersonas_kotlin.home.viewmodel.HomeActivityViewModel"/>
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.view.HomeActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/Azul_Oscuro">
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tamanioAppBar"
+                    android:src="@drawable/ic_action_icons8_back_100"
+                    android:layout_marginLeft="@dimen/margin"
+                    android:layout_alignParentLeft="true"
+                    android:background="@color/Azul_Oscuro" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/textTitle"
+                    android:textColor="@color/Azul_Claro"
+                    android:textSize="@dimen/tamanioTitulo"
+                    android:textStyle="bold|italic" />
+
+                <ImageButton
+                    android:id="@+id/btn_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/tamanioAppBar"
+                    android:src="@drawable/ic_action_icons8_info_100"
+                    android:layout_marginRight="@dimen/margin"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/Azul_Oscuro" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/tamanioAppBar"
+            android:background="@color/white">
+
+            <Spinner
+                android:id="@+id/spinner_for_action_selection"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tamanioSpinner"
+                android:layout_alignParentRight="true"
+                android:textAlignment="center" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/tamanioSpinner"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <fragment
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:id="@+id/fragContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:navGraph="@navigation/nav_graph"
+                android:layout_above="@id/bnvMenu"
+                app:defaultNavHost="true" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bnvMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                app:itemIconSize="@dimen/tamanioIcons"
+                android:background="@color/Azul_Oscuro"
+                app:itemTextColor="@color/white"
+                app:menu="@menu/btn_menu" />
+
+        </RelativeLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

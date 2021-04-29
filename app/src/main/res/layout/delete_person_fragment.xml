@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.deleteperson.DeletePersonFragment">
+
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#d3e0ea"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".deleteregistrer.DeleteRegistrerActivity">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:alpha="0.5"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/loginimage" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="30dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/border_row"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/editTextIEliminacionIdentificacion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:ems="10"
+                        android:hint="@string/identificationHint"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:text="@string/editTextEliminaIdentificacion"
+                        android:textColor="@color/Azul_Oscuro"
+                        android:textColorHint="@color/Azul_Oscuro"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/botonEliminar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_rounded"
+                        android:text="@string/botonEliminar"
+                        android:textColor="@color/white" />
+
+                    <FrameLayout
+                        android:layout_width="50dp"
+                        android:layout_height="50dp">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarDeleteRegistrer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+                    </FrameLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

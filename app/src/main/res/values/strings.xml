@@ -57,5 +57,18 @@
     <string name="progressBar" />
     <string name="imagen" />
     <string name="textView" />
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navToHome">Inicio</string>
+    <string name="navToFacebook">Facebook</string>
+    <string name="navToTwitter">Twitter</string>
+    <string name="textTitle">ingresApp</string>
+    <string name="selection_action_item">Seleccione su acción!</string>
+    <string name="nav_to_read_person_item">Leer datos de persona</string>
+    <string name="nav_to_register_person_item">Registrar una persona</string>
+    <string name="nav_to_update_person_item">Actualizar datos de persona</string>
+    <string name="nav_to_delete_person_item">Borrar datos de persona</string>
+    <string name="nav_to_export_data_item">Exportar datos almacenados</string>
+    <string name="loremIpsum">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</string>
     <![CDATA[string>]]>
 </resources>

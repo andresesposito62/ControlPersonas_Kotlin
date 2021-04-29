@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.miapp.controlpersonas_kotlin.home.view.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_deletePersonFragment"
+            app:destination="@id/deletePersonFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_readPersonFragment"
+            app:destination="@id/readPersonFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_registerPersonFragment"
+            app:destination="@id/registerPersonFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_updatePersonFragment2"
+            app:destination="@id/updatePersonFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_exportDataFragment"
+            app:destination="@id/exportDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deletePersonFragment"
+        android:name="com.miapp.controlpersonas_kotlin.home.deleteperson.DeletePersonFragment"
+        android:label="delete_person_fragment"
+        tools:layout="@layout/delete_person_fragment" />
+    <fragment
+        android:id="@+id/readPersonFragment"
+        android:name="com.miapp.controlpersonas_kotlin.home.readperson.view.ReadPersonFragment"
+        android:label="read_person_fragment"
+        tools:layout="@layout/read_person_fragment" />
+    <fragment
+        android:id="@+id/registerPersonFragment"
+        android:name="com.miapp.controlpersonas_kotlin.home.registerperson.RegisterPersonFragment"
+        android:label="register_person_fragment"
+        tools:layout="@layout/register_person_fragment" />
+    <fragment
+        android:id="@+id/updatePersonFragment"
+        android:name="com.miapp.controlpersonas_kotlin.home.updateperson.UpdatePersonFragment"
+        android:label="update_person_fragment"
+        tools:layout="@layout/update_person_fragment" />
+    <fragment
+        android:id="@+id/exportDataFragment"
+        android:name="com.miapp.controlpersonas_kotlin.home.exportdata.ExportDataFragment"
+        android:label="export_data_fragment"
+        tools:layout="@layout/export_data_fragment" />
+</navigation>
