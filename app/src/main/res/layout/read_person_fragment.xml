@@ -38,14 +38,15 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/shape_parrafo"
                             cardCornerRadius="@dimen/cardCornerRadius"
                             cardElevation="@dimen/cardElevation">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:orientation="vertical">
+                                android:orientation="vertical"
+                                android:background="@drawable/shape_parrafo"
+                                android:padding="@dimen/margin10dp">
 
                                 <FrameLayout
                                     android:layout_width="match_parent"
