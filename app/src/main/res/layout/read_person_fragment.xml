@@ -6,165 +6,171 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".home.readperson.view.ReadPersonFragment">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="@dimen/margin"
-        android:gravity="center">
-        <!--
-        -->
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        android:layout_height="match_parent">
 
-            <ScrollView
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/margin"
+            android:gravity="center">
+            <!--
+            -->
+            <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <LinearLayout
+                <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/border_row"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_height="match_parent">
 
-                    <androidx.cardview.widget.CardView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/shape_parrafo"
-                        cardCornerRadius="@dimen/cardCornerRadius"
-                        cardElevation="@dimen/cardElevation">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_row"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                        <LinearLayout
+                        <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:orientation="vertical">
+                            android:background="@drawable/shape_parrafo"
+                            cardCornerRadius="@dimen/cardCornerRadius"
+                            cardElevation="@dimen/cardElevation">
 
-                            <FrameLayout
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="@dimen/linearLayoutFormularySize"
+                                android:layout_height="match_parent"
                                 android:orientation="vertical">
-
-                                <ImageView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:src="@drawable/loginimage"
-                                    android:scaleType="centerCrop"/>
 
                                 <FrameLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent">
+                                    android:layout_height="@dimen/linearLayoutFormularySize"
+                                    android:orientation="vertical">
 
-                                    <LinearLayout
+                                    <ImageView
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
-                                        android:orientation="vertical">
+                                        android:src="@drawable/loginimage"
+                                        android:scaleType="centerCrop"/>
 
-                                        <EditText
-                                            android:id="@+id/editTextConsultaIdentificacion"
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <LinearLayout
                                             android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginBottom="10dp"
-                                            android:ems="10"
-                                            android:hint="@string/identificationHint"
-                                            android:importantForAutofill="no"
-                                            android:inputType="number"
-                                            android:text="@string/editTextConsultaIdentificacion"
-                                            android:textSize="@dimen/formularyTextSize"
-                                            android:layout_margin="@dimen/margin10dp"
-                                            android:background="@color/white"/>
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
 
-                                        <EditText
-                                            android:id="@+id/editTextConsultaNombres"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginBottom="10dp"
-                                            android:ems="10"
-                                            android:hint="@string/namesHint"
-                                            android:importantForAutofill="no"
-                                            android:inputType="textPersonName"
-                                            android:text="@string/editTextConsultaNombres"
-                                            android:layout_margin="@dimen/margin10dp"
-                                            android:background="@color/white"
-                                            android:textSize="@dimen/formularyTextSize" />
+                                            <EditText
+                                                android:id="@+id/editTextConsultaIdentificacion"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:ems="10"
+                                                android:hint="@string/identificationHint"
+                                                android:importantForAutofill="no"
+                                                android:inputType="number"
+                                                android:text="@string/editTextConsultaIdentificacion"
+                                                android:textSize="@dimen/formularyTextSize"
+                                                android:layout_margin="@dimen/margin10dp"
+                                                android:background="@color/white"/>
 
-                                        <EditText
-                                            android:id="@+id/editTextConsultaApellidos"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginBottom="10dp"
-                                            android:ems="10"
-                                            android:hint="@string/surnamesHint"
-                                            android:importantForAutofill="no"
-                                            android:inputType="textPersonName"
-                                            android:text="@string/editTextConsultaApellidos"
-                                            android:textSize="@dimen/formularyTextSize"
-                                            android:layout_margin="@dimen/margin10dp"
-                                            android:background="@color/white"/>
+                                            <EditText
+                                                android:id="@+id/editTextConsultaNombres"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:ems="10"
+                                                android:hint="@string/namesHint"
+                                                android:importantForAutofill="no"
+                                                android:inputType="textPersonName"
+                                                android:text="@string/editTextConsultaNombres"
+                                                android:layout_margin="@dimen/margin10dp"
+                                                android:background="@color/white"
+                                                android:textSize="@dimen/formularyTextSize" />
 
-                                        <EditText
-                                            android:id="@+id/editTextConsultaTelefono"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginBottom="10dp"
-                                            android:ems="10"
-                                            android:hint="@string/phoneHint"
-                                            android:importantForAutofill="no"
-                                            android:inputType="phone"
-                                            android:text="@string/editTextConsultaTelefono"
-                                            android:textSize="@dimen/formularyTextSize"
-                                            android:layout_margin="@dimen/margin10dp"
-                                            android:background="@color/white"/>
+                                            <EditText
+                                                android:id="@+id/editTextConsultaApellidos"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:ems="10"
+                                                android:hint="@string/surnamesHint"
+                                                android:importantForAutofill="no"
+                                                android:inputType="textPersonName"
+                                                android:text="@string/editTextConsultaApellidos"
+                                                android:textSize="@dimen/formularyTextSize"
+                                                android:layout_margin="@dimen/margin10dp"
+                                                android:background="@color/white"/>
 
-                                        <EditText
-                                            android:id="@+id/editTextConsultaTemperatura"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_marginBottom="10dp"
-                                            android:ems="10"
-                                            android:hint="@string/temperatureHint"
-                                            android:importantForAutofill="no"
-                                            android:inputType="numberDecimal"
-                                            android:textSize="@dimen/formularyTextSize"
-                                            android:layout_margin="@dimen/margin10dp"
-                                            android:background="@color/white"/>
+                                            <EditText
+                                                android:id="@+id/editTextConsultaTelefono"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:ems="10"
+                                                android:hint="@string/phoneHint"
+                                                android:importantForAutofill="no"
+                                                android:inputType="phone"
+                                                android:text="@string/editTextConsultaTelefono"
+                                                android:textSize="@dimen/formularyTextSize"
+                                                android:layout_margin="@dimen/margin10dp"
+                                                android:background="@color/white"/>
 
-                                        <Spinner
-                                            android:id="@+id/spinnerConsultaRol"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="@dimen/margin"
-                                            android:layout_marginBottom="10dp"
-                                            android:layout_margin="@dimen/margin10dp"
-                                            android:background="@color/white"/>
+                                            <EditText
+                                                android:id="@+id/editTextConsultaTemperatura"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:ems="10"
+                                                android:hint="@string/temperatureHint"
+                                                android:importantForAutofill="no"
+                                                android:inputType="numberDecimal"
+                                                android:textSize="@dimen/formularyTextSize"
+                                                android:layout_margin="@dimen/margin10dp"
+                                                android:background="@color/white"/>
 
-                                    </LinearLayout>
+                                            <Spinner
+                                                android:id="@+id/spinnerConsultaRol"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/margin"
+                                                android:layout_marginBottom="10dp"
+                                                android:layout_margin="@dimen/margin10dp"
+                                                android:background="@color/white"/>
+
+                                        </LinearLayout>
+
+                                    </FrameLayout>
 
                                 </FrameLayout>
 
-                            </FrameLayout>
+                                <Button
+                                    android:id="@+id/botonConsultar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/button_rounded"
+                                    android:backgroundTint="#144359"
+                                    android:text="@string/botonConsultarRegistro"
+                                    android:textColor="#d3e0ea"
+                                    android:layout_marginTop="@dimen/margin"/>
 
-                            <Button
-                                android:id="@+id/botonConsultar"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/button_rounded"
-                                android:backgroundTint="#144359"
-                                android:text="@string/botonConsultarRegistro"
-                                android:textColor="#d3e0ea"
-                                android:layout_marginTop="@dimen/margin"/>
+                            </LinearLayout>
 
-                        </LinearLayout>
+                        </androidx.cardview.widget.CardView>
 
-                    </androidx.cardview.widget.CardView>
+                    </LinearLayout>
 
-                </LinearLayout>
+                </ScrollView>
 
-            </ScrollView>
+            </FrameLayout>
 
-        </FrameLayout>
+        </LinearLayout>
 
-    </LinearLayout>
+    </ScrollView>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
