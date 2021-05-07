@@ -46,6 +46,7 @@ class ReadPersonFragment() : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(ReadPersonViewModel::class.java)
+        binding.viewModel = viewModel
         observers()
     }
 
@@ -71,10 +72,39 @@ class ReadPersonFragment() : Fragment() {
             }
         })
 
+        viewModel.getInitQuery().observe(viewLifecycleOwner, Observer {
+            person.setIdentificacion(binding.editTextConsultaIdentificacion.text.toString().trim())
+            person.setNombres(binding.editTextConsultaNombres.text.toString().trim())
+            person.setApellidos(binding.editTextConsultaApellidos.text.toString().trim())
+            person.setTelefono(binding.editTextConsultaTelefono.text.toString().trim())
+            person.setTemperatura(binding.editTextConsultaTemperatura.text.toString().trim())
+            person.setRol("")
+
+            if (it){
+                if(!person.getIdentificacion().isNullOrEmpty()){
+                    viewModel.queryDataPerson(person, requireContext())
+                }else{
+                    val messageFactory = MessageFactory()
+                    messageFactory.getMessage(requireContext(), MessageFactory.TYPE_DATA_EMPTY).show()
+                }
+                viewModel.endQuery()
+            }
+        })
+
         viewModel.getDataPersonReaded().observe(viewLifecycleOwner, Observer {
-            //person.setIdentificacion("123")
-            val messageFactory = MessageFactory()
-            messageFactory.getMessage(requireContext(), MessageFactory.TYPE_DATA_EMPTY).show()
+            if (!it?.getIdentificacion().isNullOrEmpty() && !it?.getNombres().isNullOrEmpty()&&
+                !it?.getApellidos().isNullOrEmpty() && !it?.getTelefono().isNullOrEmpty()&&
+                !it?.getTemperatura().isNullOrEmpty()){
+
+                binding.editTextConsultaIdentificacion.setText(it?.getIdentificacion())
+                binding.editTextConsultaNombres.setText(it?.getNombres())
+                binding.editTextConsultaApellidos.setText(it?.getApellidos())
+                binding.editTextConsultaTelefono.setText(it?.getTelefono())
+                binding.editTextConsultaTemperatura.setText(it?.getTemperatura())
+            }else{
+                val messageFactory = MessageFactory()
+                messageFactory.getMessage(requireContext(), MessageFactory.TYPE_ERROR).show()
+            }
         })
     }
 }

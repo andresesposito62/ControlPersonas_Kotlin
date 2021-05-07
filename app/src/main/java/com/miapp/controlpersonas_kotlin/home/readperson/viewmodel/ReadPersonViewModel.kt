@@ -7,19 +7,33 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.miapp.controlpersonas_kotlin.home.readperson.model.ReadPersonObservable
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
+import com.miapp.controlpersonas_kotlin.updateregistrer.model.PersonUpdateObservable
 import kotlinx.coroutines.launch
 
 class ReadPersonViewModel : ViewModel() {
     private var dataPersonReaded = MutableLiveData<Persona?>()
     private var personReadObservable: ReadPersonObservable = ReadPersonObservable()
+    private var initQuery = MutableLiveData<Boolean>()
+
+    fun queryDataPerson(person: Persona, context: Context){
+        viewModelScope.launch {
+            dataPersonReaded.value = personReadObservable.getPersonReadDB(person, context)
+        }
+    }
 
     fun getDataPersonReaded(): LiveData<Persona?> {
         return dataPersonReaded
     }
 
-    fun initQuery(person: Persona, context: Context){
-        viewModelScope.launch {
-            dataPersonReaded =  personReadObservable.getPersonReadDB(person, context)
-        }
+    fun getInitQuery(): LiveData<Boolean>{
+        return initQuery
+    }
+
+    fun onButtonLoginClicked(){
+        initQuery.value = true
+    }
+
+    fun endQuery(){
+        initQuery.value = false
     }
 }

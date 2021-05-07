@@ -8,22 +8,22 @@ import java.lang.NullPointerException
 
 class ReadPersonRepositoryImpl (): ReadPersonRepository {
 
-    private lateinit var personResult: MutableLiveData<Persona?>
+    private var personResult : Persona? = null
 
     override fun getPersonReadApi() {
         TODO("Not yet implemented")
     }
 
-    override fun getPersonReadDB(person: Persona?, context: Context): MutableLiveData<Persona?> {
+    override fun getPersonReadDB(person: Persona?, context: Context): Persona? {
+
         var implementInterfaceReadDatabaseRegistrer = ImplementInterfaceReadDatabaseRegistrer()
+
         try {
-            personResult.value = implementInterfaceReadDatabaseRegistrer.readRegistrerFromDataBase(person!!, context)
+            personResult= implementInterfaceReadDatabaseRegistrer.readRegistrerFromDataBase(person!!, context)
         }catch (e : NullPointerException){}
+
         finally {
             return personResult
-            //personReadPresenter.showPersonRead(personResult)
-            //val personReadObservable = PersonReadObservable()
-            //personReadObservable.changePersonRead(personResult)
         }
     }
 }

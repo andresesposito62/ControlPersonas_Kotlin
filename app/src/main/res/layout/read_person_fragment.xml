@@ -4,7 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="viewModel"
+            type="com.miapp.controlpersonas_kotlin.home.readperson.viewmodel.ReadPersonViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -165,7 +167,8 @@
                                         android:backgroundTint="#144359"
                                         android:text="@string/botonConsultarRegistro"
                                         android:textColor="#d3e0ea"
-                                        android:layout_marginTop="@dimen/margin" />
+                                        android:layout_marginTop="@dimen/margin"
+                                        android:onClick="@{ () -> viewModel.onButtonLoginClicked()}"/>
 
                                 </LinearLayout>
 
