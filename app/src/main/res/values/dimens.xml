@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="tamanioTitulo">20sp</dimen>
-    <dimen name="tamanioSubtitulo">10sp</dimen>
-    <dimen name="tamanioAppBar">70dp</dimen>
-    <dimen name="tamanioSpinner">50dp</dimen>
+    <dimen name="titleSize">20sp</dimen>
+    <dimen name="subtitleSize">10sp</dimen>
+    <dimen name="formularyTextSize">15sp</dimen>
+    <dimen name="appBarSize">70dp</dimen>
+    <dimen name="spinnerSize">50dp</dimen>
     <dimen name="margin">20dp</dimen>
+    <dimen name="margin10dp">10dp</dimen>
     <dimen name="cardCornerRadius">10dp</dimen>
     <dimen name="cardElevation">4dp</dimen>
-    <dimen name="tamanioCardViewImages">200dp</dimen>
-    <dimen name="tamanioIcons">25dp</dimen>
+    <dimen name="cardViewImagesSize">200dp</dimen>
+    <dimen name="cardViewFormularySize">430dp</dimen>
+    <dimen name="linearLayoutFormularySize">250dp</dimen>
+    <dimen name="iconsSize">25dp</dimen>
+    <dimen name="buttonSize">30dp</dimen>
 </resources>

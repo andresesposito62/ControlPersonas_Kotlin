@@ -38,7 +38,7 @@
 
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/tamanioCardViewImages"
+                            android:layout_height="@dimen/cardViewImagesSize"
                             android:src="@drawable/loginimage"
                             android:scaleType="centerCrop"/>
 
@@ -67,7 +67,7 @@
 
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/tamanioCardViewImages"
+                            android:layout_height="@dimen/cardViewImagesSize"
                             android:src="@drawable/loginimage"
                             android:scaleType="centerCrop"/>
 
@@ -96,7 +96,7 @@
 
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/tamanioCardViewImages"
+                            android:layout_height="@dimen/cardViewImagesSize"
                             android:src="@drawable/loginimage"
                             android:scaleType="centerCrop"/>
 
