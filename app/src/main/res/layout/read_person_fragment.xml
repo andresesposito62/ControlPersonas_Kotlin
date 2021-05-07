@@ -77,20 +77,22 @@
                                                 android:orientation="vertical">
 
                                                 <EditText
-                                                    android:id="@+id/editTextConsultaIdentificacion"
-                                                    android:layout_width="match_parent"
-                                                    android:layout_height="wrap_content"
-                                                    android:layout_marginBottom="10dp"
-                                                    android:ems="10"
-                                                    android:hint="@string/identificationHint"
-                                                    android:importantForAutofill="no"
-                                                    android:inputType="number"
-                                                    android:text="@string/editTextConsultaIdentificacion"
-                                                    android:textSize="@dimen/formularyTextSize"
-                                                    android:layout_margin="@dimen/margin10dp"
-                                                    android:background="@color/white" />
+                                                        android:id="@+id/editTextConsultaIdentificacion"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginBottom="10dp"
+                                                        android:ems="10"
+                                                        android:hint="@string/identificationHint"
+                                                        android:importantForAutofill="no"
+                                                        android:inputType="number"
+                                                        android:text="@string/editTextConsultaIdentificacion"
+                                                        android:textSize="@dimen/formularyTextSize"
+                                                        android:layout_margin="@dimen/margin10dp"
+                                                        android:background="@color/white"
+                                                        android:drawableStart="@drawable/ic_editable_field"
+                                                        android:imeOptions="actionNext"/>
 
-                                                <EditText
+                                                <TextView
                                                     android:id="@+id/editTextConsultaNombres"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
@@ -104,7 +106,7 @@
                                                     android:background="@color/white"
                                                     android:textSize="@dimen/formularyTextSize" />
 
-                                                <EditText
+                                                <TextView
                                                     android:id="@+id/editTextConsultaApellidos"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
@@ -118,7 +120,7 @@
                                                     android:layout_margin="@dimen/margin10dp"
                                                     android:background="@color/white" />
 
-                                                <EditText
+                                                <TextView
                                                     android:id="@+id/editTextConsultaTelefono"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
@@ -132,7 +134,7 @@
                                                     android:layout_margin="@dimen/margin10dp"
                                                     android:background="@color/white" />
 
-                                                <EditText
+                                                <TextView
                                                     android:id="@+id/editTextConsultaTemperatura"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="wrap_content"
@@ -145,7 +147,7 @@
                                                     android:layout_margin="@dimen/margin10dp"
                                                     android:background="@color/white" />
 
-                                                <Spinner
+                                                <TextView
                                                     android:id="@+id/spinnerConsultaRol"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="@dimen/margin"
