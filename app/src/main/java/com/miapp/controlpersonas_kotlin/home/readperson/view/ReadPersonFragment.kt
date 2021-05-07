@@ -1,19 +1,22 @@
 package com.miapp.controlpersonas_kotlin.home.readperson.view
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.Observer
+import androidx.lifecycle.*
 import androidx.navigation.fragment.findNavController
 import com.miapp.controlpersonas_kotlin.R
+import com.miapp.controlpersonas_kotlin.databinding.ReadPersonFragmentBinding
+import com.miapp.controlpersonas_kotlin.factory.MessageFactory
+import com.miapp.controlpersonas_kotlin.home.exportdata.ExportDataViewModel
 import com.miapp.controlpersonas_kotlin.home.readperson.viewmodel.ReadPersonViewModel
 import com.miapp.controlpersonas_kotlin.home.singleton.SpinnerActionSingletonObservable
+import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 
-class ReadPersonFragment : Fragment() {
+class ReadPersonFragment() : Fragment() {
 
     companion object {
         fun newInstance() = ReadPersonFragment()
@@ -21,22 +24,32 @@ class ReadPersonFragment : Fragment() {
 
     private lateinit var spinnerActionSingletonObservable : SpinnerActionSingletonObservable
     private lateinit var viewModel: ReadPersonViewModel
+    private var _binding: ReadPersonFragmentBinding? = null
+    // This property is only valid between onCreateView and
+    // onDestroyView.
+    private val binding get() = _binding!!
+    private var person = Persona()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        observer()
-        return inflater.inflate(R.layout.read_person_fragment, container, false)
+        _binding = ReadPersonFragmentBinding.inflate(inflater, container, false)
+        val view = binding.root
+        return view
+    }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(ReadPersonViewModel::class.java)
-        // TODO: Use the ViewModel
+        observers()
     }
 
-    fun observer(){
+    fun observers(){
         spinnerActionSingletonObservable = SpinnerActionSingletonObservable.getInstance(requireContext())
         spinnerActionSingletonObservable.getpositionSpinnerActionSelector().observe(viewLifecycleOwner, Observer {
             if (it != 2){
@@ -57,5 +70,13 @@ class ReadPersonFragment : Fragment() {
                 }
             }
         })
+
+        viewModel.getDataPersonReaded().observe(viewLifecycleOwner, Observer {
+            //person.setIdentificacion("123")
+            val messageFactory = MessageFactory()
+            messageFactory.getMessage(requireContext(), MessageFactory.TYPE_DATA_EMPTY).show()
+        })
     }
 }
+
+
