@@ -1,139 +1,178 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".home.updateperson.UpdatePersonFragment">
 
-    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/linearLayout"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#d3e0ea"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
 
-        <FrameLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:alpha="0.5"
-                android:scaleType="centerCrop"
-                app:srcCompat="@drawable/loginimage" />
-
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="30dp">
-
-                <LinearLayout
+                android:orientation="vertical"
+                android:padding="@dimen/margin"
+                android:gravity="center">
+                <!--
+                -->
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:background="@drawable/border_row"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    android:layout_height="match_parent">
 
-                    <EditText
-                        android:id="@+id/editTextActualizacionIdentificacion"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:ems="10"
-                        android:hint="@string/identificationHint"
-                        android:importantForAutofill="no"
-                        android:inputType="number"
-                        android:text="@string/editTextActualizaIdentificacion"
-                        android:textColor="@color/Azul_Oscuro"
-                        android:textColorHint="@color/Azul_Oscuro"
-                        android:textSize="18sp" />
+                        android:layout_gravity="center"
+                        android:background="@drawable/border_row"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                    <EditText
-                        android:id="@+id/editTextActualizacionNombres"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:ems="10"
-                        android:hint="@string/namesHint"
-                        android:importantForAutofill="no"
-                        android:inputType="textPersonName"
-                        android:text="@string/editTextActualizaNombres"
-                        android:textColor="@color/Azul_Oscuro"
-                        android:textColorHint="@color/Azul_Oscuro"
-                        android:textSize="18sp" />
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            cardCornerRadius="@dimen/cardCornerRadius"
+                            cardElevation="@dimen/cardElevation">
 
-                    <EditText
-                        android:id="@+id/editTextActualizacionApellidos"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:ems="10"
-                        android:hint="@string/surnamesHint"
-                        android:importantForAutofill="no"
-                        android:inputType="textPersonName"
-                        android:text="@string/editTextActualizaApellidos"
-                        android:textColor="@color/Azul_Oscuro"
-                        android:textColorHint="@color/Azul_Oscuro"
-                        android:textSize="18sp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:background="@drawable/shape_parrafo"
+                                android:padding="@dimen/margin10dp">
 
-                    <EditText
-                        android:id="@+id/editTextActualizacionTelefono"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:ems="10"
-                        android:hint="@string/phoneHint"
-                        android:importantForAutofill="no"
-                        android:inputType="phone"
-                        android:text="@string/editTextActualizaTelefono"
-                        android:textColor="@color/Azul_Oscuro"
-                        android:textColorHint="@color/Azul_Oscuro"
-                        android:textSize="18sp" />
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/linearLayoutFormularySize"
+                                    android:orientation="vertical">
 
-                    <EditText
-                        android:id="@+id/editTextActualizacionTemperatura"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:ems="10"
-                        android:hint="@string/temperatureHint"
-                        android:importantForAutofill="no"
-                        android:inputType="numberDecimal"
-                        android:text="@string/editTextActualizaTemperatura"
-                        android:textColor="@color/Azul_Oscuro"
-                        android:textColorHint="@color/Azul_Oscuro"
-                        android:textSize="18sp" />
+                                    <ImageView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:src="@drawable/loginimage"
+                                        android:scaleType="centerCrop"/>
 
-                    <Spinner
-                        android:id="@+id/spinnerActualizacionRol"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp" />
+                                    <FrameLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
 
-                    <Button
-                        android:id="@+id/botonActualizar"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/button_rounded"
-                        android:text="@string/botonActualizar"
-                        android:textColor="#d3e0ea" />
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
 
-                    <FrameLayout
-                        android:layout_width="50dp"
-                        android:layout_height="50dp">
+                                            <EditText
+                                                android:id="@+id/editTextActualizacionIdentificacion"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:ems="10"
+                                                android:hint="@string/identificationHint"
+                                                android:importantForAutofill="no"
+                                                android:inputType="number"
+                                                android:text="@string/editTextConsultaIdentificacion"
+                                                android:textSize="@dimen/formularyTextSize"
+                                                android:layout_margin="@dimen/margin10dp"
+                                                android:background="@color/white"/>
 
-                        <ProgressBar
-                            android:id="@+id/progressBarUpdateRegistrer"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:visibility="gone" />
-                    </FrameLayout>
-                </LinearLayout>
-            </FrameLayout>
-        </FrameLayout>
-    </LinearLayout>
-</FrameLayout>
+                                            <EditText
+                                                android:id="@+id/editTextActualizacionNombres"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:ems="10"
+                                                android:hint="@string/namesHint"
+                                                android:importantForAutofill="no"
+                                                android:inputType="textPersonName"
+                                                android:text="@string/editTextConsultaNombres"
+                                                android:layout_margin="@dimen/margin10dp"
+                                                android:background="@color/white"
+                                                android:textSize="@dimen/formularyTextSize" />
+
+                                            <EditText
+                                                android:id="@+id/editTextActualizacionApellidos"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:ems="10"
+                                                android:hint="@string/surnamesHint"
+                                                android:importantForAutofill="no"
+                                                android:inputType="textPersonName"
+                                                android:text="@string/editTextConsultaApellidos"
+                                                android:textSize="@dimen/formularyTextSize"
+                                                android:layout_margin="@dimen/margin10dp"
+                                                android:background="@color/white"/>
+
+                                            <EditText
+                                                android:id="@+id/editTextActualizacionTelefono"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:ems="10"
+                                                android:hint="@string/phoneHint"
+                                                android:importantForAutofill="no"
+                                                android:inputType="phone"
+                                                android:text="@string/editTextConsultaTelefono"
+                                                android:textSize="@dimen/formularyTextSize"
+                                                android:layout_margin="@dimen/margin10dp"
+                                                android:background="@color/white"/>
+
+                                            <EditText
+                                                android:id="@+id/editTextActualizacionTemperatura"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:ems="10"
+                                                android:hint="@string/temperatureHint"
+                                                android:importantForAutofill="no"
+                                                android:inputType="numberDecimal"
+                                                android:textSize="@dimen/formularyTextSize"
+                                                android:layout_margin="@dimen/margin10dp"
+                                                android:background="@color/white"/>
+
+                                            <Spinner
+                                                android:visibility="invisible"
+                                                android:id="@+id/spinnerConsultaRol"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/margin"
+                                                android:layout_marginBottom="10dp"
+                                                android:layout_margin="@dimen/margin10dp"
+                                                android:background="@color/white"/>
+
+                                        </LinearLayout>
+
+                                    </FrameLayout>
+
+                                </FrameLayout>
+
+                                <Button
+                                    android:id="@+id/botonActualizar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/button_rounded"
+                                    android:backgroundTint="#144359"
+                                    android:text="@string/botonActualizar"
+                                    android:textColor="#d3e0ea"
+                                    android:layout_marginTop="@dimen/margin"/>
+
+                            </LinearLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

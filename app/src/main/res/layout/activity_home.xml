@@ -26,7 +26,7 @@
                 <ImageButton
                     android:id="@+id/btn_back"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/tamanioAppBar"
+                    android:layout_height="@dimen/appBarSize"
                     android:src="@drawable/ic_action_icons8_back_100"
                     android:layout_marginLeft="@dimen/margin"
                     android:layout_alignParentLeft="true"
@@ -38,13 +38,13 @@
                     android:layout_centerInParent="true"
                     android:text="@string/textTitle"
                     android:textColor="@color/Azul_Claro"
-                    android:textSize="@dimen/tamanioTitulo"
+                    android:textSize="@dimen/titleSize"
                     android:textStyle="bold|italic" />
 
                 <ImageButton
                     android:id="@+id/btn_info"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/tamanioAppBar"
+                    android:layout_height="@dimen/appBarSize"
                     android:src="@drawable/ic_action_icons8_info_100"
                     android:layout_marginRight="@dimen/margin"
                     android:layout_alignParentRight="true"
@@ -57,13 +57,13 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/tamanioAppBar"
+            android:layout_marginTop="@dimen/appBarSize"
             android:background="@color/white">
 
             <Spinner
                 android:id="@+id/spinner_for_action_selection"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/tamanioSpinner"
+                android:layout_height="@dimen/spinnerSize"
                 android:layout_alignParentRight="true"
                 android:textAlignment="center" />
 
@@ -72,7 +72,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/tamanioSpinner"
+            android:layout_marginTop="@dimen/spinnerSize"
             app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
             <fragment
@@ -89,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                app:itemIconSize="@dimen/tamanioIcons"
+                app:itemIconSize="@dimen/iconsSize"
                 android:background="@color/Azul_Oscuro"
                 app:itemTextColor="@color/white"
                 app:menu="@menu/btn_menu" />
