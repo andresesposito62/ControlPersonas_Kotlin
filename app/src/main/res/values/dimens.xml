@@ -11,7 +11,7 @@
     <dimen name="cardElevation">4dp</dimen>
     <dimen name="cardViewImagesSize">200dp</dimen>
     <dimen name="cardViewFormularySize">430dp</dimen>
-    <dimen name="linearLayoutFormularySize">250dp</dimen>
+    <dimen name="linearLayoutFormularySize">270dp</dimen>
     <dimen name="iconsSize">25dp</dimen>
     <dimen name="buttonSize">30dp</dimen>
 </resources>
