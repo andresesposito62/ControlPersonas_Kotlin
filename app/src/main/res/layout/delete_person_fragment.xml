@@ -1,114 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".home.deleteperson.DeletePersonFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <RelativeLayout
+    <data>
+        <variable
+            name="viewModel"
+            type="com.miapp.controlpersonas_kotlin.home.deleteperson.viewmodel.DeletePersonViewModel" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        android:layout_height="match_parent"
+        tools:context=".home.deleteperson.view.DeletePersonFragment">
 
-        <ScrollView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
 
-            <LinearLayout
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="@dimen/margin"
-                android:gravity="center">
-                <!--
-                -->
-                <FrameLayout
+                android:layout_height="wrap_content">
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin"
+                    android:gravity="center">
+                    <!--
+                    -->
+                    <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:background="@drawable/border_row"
-                        android:gravity="center"
-                        android:orientation="vertical">
+                        android:layout_height="match_parent">
 
-                        <androidx.cardview.widget.CardView
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            cardCornerRadius="@dimen/cardCornerRadius"
-                            cardElevation="@dimen/cardElevation">
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/border_row"
+                            android:gravity="center"
+                            android:orientation="vertical">
 
-                            <LinearLayout
+                            <androidx.cardview.widget.CardView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:background="@drawable/shape_parrafo"
-                                android:padding="@dimen/margin10dp">
+                                cardCornerRadius="@dimen/cardCornerRadius"
+                                cardElevation="@dimen/cardElevation">
 
-                                <FrameLayout
+                                <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="@dimen/linearLayoutFormularySize"
-                                    android:orientation="vertical">
-
-                                    <ImageView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="match_parent"
-                                        android:src="@drawable/loginimage"
-                                        android:scaleType="centerCrop"/>
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:background="@drawable/shape_parrafo"
+                                    android:padding="@dimen/margin10dp">
 
                                     <FrameLayout
                                         android:layout_width="match_parent"
-                                        android:layout_height="match_parent">
+                                        android:layout_height="@dimen/linearLayoutFormularySize"
+                                        android:orientation="vertical">
 
-                                        <LinearLayout
+                                        <ImageView
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
-                                            android:orientation="vertical">
+                                            android:src="@drawable/loginimage"
+                                            android:scaleType="centerCrop" />
 
-                                            <EditText
-                                                android:id="@+id/editTextIEliminacionIdentificacion"
+                                        <FrameLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <LinearLayout
                                                 android:layout_width="match_parent"
-                                                android:layout_height="wrap_content"
-                                                android:layout_marginBottom="10dp"
-                                                android:ems="10"
-                                                android:hint="@string/identificationHint"
-                                                android:importantForAutofill="no"
-                                                android:inputType="number"
-                                                android:text="@string/editTextConsultaIdentificacion"
-                                                android:textSize="@dimen/formularyTextSize"
-                                                android:layout_margin="@dimen/margin10dp"
-                                                android:background="@color/white"/>
+                                                android:layout_height="match_parent"
+                                                android:orientation="vertical">
 
-                                        </LinearLayout>
+                                                <EditText
+                                                    android:id="@+id/editTextIEliminacionIdentificacion"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginBottom="10dp"
+                                                    android:ems="10"
+                                                    android:hint="@string/identificationHint"
+                                                    android:importantForAutofill="no"
+                                                    android:inputType="number"
+                                                    android:text="@string/editTextConsultaIdentificacion"
+                                                    android:textSize="@dimen/formularyTextSize"
+                                                    android:layout_margin="@dimen/margin10dp"
+                                                    android:background="@color/white"
+                                                    android:drawableStart="@drawable/ic_editable_field"/>
+
+                                            </LinearLayout>
+
+                                        </FrameLayout>
 
                                     </FrameLayout>
 
-                                </FrameLayout>
+                                    <Button
+                                        android:id="@+id/botonEliminar"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/button_rounded"
+                                        android:backgroundTint="#144359"
+                                        android:text="@string/botonEliminar"
+                                        android:textColor="#d3e0ea"
+                                        android:layout_marginTop="@dimen/margin"
+                                        android:onClick="@{ () -> viewModel.onButtonLoginClicked()}"/>
 
-                                <Button
-                                    android:id="@+id/botonEliminar"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:background="@drawable/button_rounded"
-                                    android:backgroundTint="#144359"
-                                    android:text="@string/botonEliminar"
-                                    android:textColor="#d3e0ea"
-                                    android:layout_marginTop="@dimen/margin"/>
+                                </LinearLayout>
 
-                            </LinearLayout>
+                            </androidx.cardview.widget.CardView>
 
-                        </androidx.cardview.widget.CardView>
+                        </LinearLayout>
 
-                    </LinearLayout>
+                    </FrameLayout>
 
-                </FrameLayout>
+                </LinearLayout>
 
-            </LinearLayout>
+            </ScrollView>
 
-        </ScrollView>
+        </RelativeLayout>
 
-    </RelativeLayout>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/deletePersonFragment"
-        android:name="com.miapp.controlpersonas_kotlin.home.deleteperson.DeletePersonFragment"
+        android:name="com.miapp.controlpersonas_kotlin.home.deleteperson.view.DeletePersonFragment"
         android:label="delete_person_fragment"
         tools:layout="@layout/delete_person_fragment" />
     <fragment
@@ -43,7 +43,7 @@
         tools:layout="@layout/register_person_fragment" />
     <fragment
         android:id="@+id/updatePersonFragment"
-        android:name="com.miapp.controlpersonas_kotlin.home.updateperson.UpdatePersonFragment"
+        android:name="com.miapp.controlpersonas_kotlin.home.updateperson.view.UpdatePersonFragment"
         android:label="update_person_fragment"
         tools:layout="@layout/update_person_fragment" />
     <fragment
