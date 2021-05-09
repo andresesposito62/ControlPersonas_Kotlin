@@ -1,8 +1,6 @@
 package com.miapp.controlpersonas_kotlin.home.deleteperson.model
 
 import android.content.Context
-import com.miapp.controlpersonas_kotlin.deleteregistrer.ImplementInterfaceDeleteDatabaseRegistrer
-import com.miapp.controlpersonas_kotlin.home.readperson.model.ImplementInterfaceReadDatabaseRegistrer
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 import java.lang.NullPointerException
 

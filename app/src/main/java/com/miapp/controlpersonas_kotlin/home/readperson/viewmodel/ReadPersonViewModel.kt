@@ -7,7 +7,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.miapp.controlpersonas_kotlin.home.readperson.model.ReadPersonObservable
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
-import com.miapp.controlpersonas_kotlin.updateregistrer.model.PersonUpdateObservable
 import kotlinx.coroutines.launch
 
 class ReadPersonViewModel : ViewModel() {

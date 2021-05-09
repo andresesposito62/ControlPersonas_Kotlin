@@ -1,7 +1,6 @@
 package com.miapp.controlpersonas_kotlin.home.registerperson.model
 
 import android.content.Context
-import com.miapp.controlpersonas_kotlin.createregistrer.presenter.PersonCreatePresenter
 import com.miapp.controlpersonas_kotlin.modelo.datos.InterfaceCreateDatabaseRegistrer
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 import java.lang.NullPointerException

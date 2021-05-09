@@ -1,9 +1,7 @@
 package com.miapp.controlpersonas_kotlin.home.readperson.model
 
 import android.content.Context
-import androidx.lifecycle.MutableLiveData
 import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
-import com.miapp.controlpersonas_kotlin.personread.presenter.PersonReadPresenter
 import java.lang.NullPointerException
 
 class ReadPersonRepositoryImpl (): ReadPersonRepository {
