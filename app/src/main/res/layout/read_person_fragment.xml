@@ -148,6 +148,7 @@
                                                     android:background="@color/white" />
 
                                                 <TextView
+                                                    android:visibility="invisible"
                                                     android:id="@+id/spinnerConsultaRol"
                                                     android:layout_width="match_parent"
                                                     android:layout_height="@dimen/margin"
