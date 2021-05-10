@@ -1,19 +1,14 @@
 package com.miapp.controlpersonas_kotlin.actionselector
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.miapp.controlpersonas_kotlin.R
-import com.miapp.controlpersonas_kotlin.deleteregistrer.DeleteRegistrerActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.miapp.controlpersonas_kotlin.actionselector.model.Action
-import com.miapp.controlpersonas_kotlin.createregistrer.view.PersonCreateActivity
-import com.miapp.controlpersonas_kotlin.personread.view.PersonReadActivity
-import com.miapp.controlpersonas_kotlin.updateregistrer.view.PersonUpdateActivity
 
 class ActionSelectorActivity : AppCompatActivity(), RecyclerAdapter.OnActionsClickListener, ActionSelectorView{
 
@@ -80,21 +75,17 @@ class ActionSelectorActivity : AppCompatActivity(), RecyclerAdapter.OnActionsCli
     }
 
     override fun navigateToCreateRegistrer(){
-        val intent = Intent(this, PersonCreateActivity::class.java)
         startActivity(intent)
     }
 
     override fun navigateToReadRegistrer(){
-        val intent = Intent(this, PersonReadActivity::class.java)
         startActivity(intent)
     }
 
     override fun navigateToUpdateRegistrer(){
-        val intent = Intent(this, PersonUpdateActivity::class.java)
         startActivity(intent)
     }
     override fun navigateToDeleteRegistrer(){
-        val intent = Intent(this, DeleteRegistrerActivity::class.java)
         startActivity(intent)
     }
 }

@@ -5,13 +5,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.miapp.controlpersonas_kotlin.home.registerperson.viewmodel.RegisterPersonViewModel" />
+            type="com.miapp.controlpersonas_kotlin.registerperson.viewmodel.RegisterPersonViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".home.registerperson.view.RegisterPersonFragment">
+        tools:context=".registerperson.view.RegisterPersonFragment">
 
         <RelativeLayout
             android:layout_width="match_parent"

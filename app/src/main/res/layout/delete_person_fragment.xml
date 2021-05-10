@@ -5,13 +5,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.miapp.controlpersonas_kotlin.home.deleteperson.viewmodel.DeletePersonViewModel" />
+            type="com.miapp.controlpersonas_kotlin.deleteperson.viewmodel.DeletePersonViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".home.deleteperson.view.DeletePersonFragment">
+        tools:context=".deleteperson.view.DeletePersonFragment">
 
         <RelativeLayout
             android:layout_width="match_parent"
