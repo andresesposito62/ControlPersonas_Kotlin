@@ -28,27 +28,27 @@
     </fragment>
     <fragment
         android:id="@+id/deletePersonFragment"
-        android:name="com.miapp.controlpersonas_kotlin.home.deleteperson.view.DeletePersonFragment"
+        android:name="com.miapp.controlpersonas_kotlin.deleteperson.view.DeletePersonFragment"
         android:label="delete_person_fragment"
         tools:layout="@layout/delete_person_fragment" />
     <fragment
         android:id="@+id/readPersonFragment"
-        android:name="com.miapp.controlpersonas_kotlin.home.readperson.view.ReadPersonFragment"
+        android:name="com.miapp.controlpersonas_kotlin.readperson.view.ReadPersonFragment"
         android:label="read_person_fragment"
         tools:layout="@layout/read_person_fragment" />
     <fragment
         android:id="@+id/registerPersonFragment"
-        android:name="com.miapp.controlpersonas_kotlin.home.registerperson.view.RegisterPersonFragment"
+        android:name="com.miapp.controlpersonas_kotlin.registerperson.view.RegisterPersonFragment"
         android:label="register_person_fragment"
         tools:layout="@layout/register_person_fragment" />
     <fragment
         android:id="@+id/updatePersonFragment"
-        android:name="com.miapp.controlpersonas_kotlin.home.updateperson.view.UpdatePersonFragment"
+        android:name="com.miapp.controlpersonas_kotlin.updateperson.view.UpdatePersonFragment"
         android:label="update_person_fragment"
         tools:layout="@layout/update_person_fragment" />
     <fragment
         android:id="@+id/exportDataFragment"
-        android:name="com.miapp.controlpersonas_kotlin.home.exportdata.ExportDataFragment"
+        android:name="com.miapp.controlpersonas_kotlin.exportdata.ExportDataFragment"
         android:label="export_data_fragment"
         tools:layout="@layout/export_data_fragment" />
 </navigation>

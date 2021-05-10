@@ -6,13 +6,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.miapp.controlpersonas_kotlin.home.readperson.viewmodel.ReadPersonViewModel" />
+            type="com.miapp.controlpersonas_kotlin.readperson.viewmodel.ReadPersonViewModel" />
     </data>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".home.readperson.view.ReadPersonFragment">
+        tools:context=".readperson.view.ReadPersonFragment">
 
         <RelativeLayout
             android:layout_width="match_parent"

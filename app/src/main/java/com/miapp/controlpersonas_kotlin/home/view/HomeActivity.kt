@@ -12,7 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import com.miapp.controlpersonas_kotlin.R
 import com.miapp.controlpersonas_kotlin.databinding.ActivityHomeBinding
-import com.miapp.controlpersonas_kotlin.home.singleton.SpinnerActionSingletonObservable
+import com.miapp.controlpersonas_kotlin.singleton.SpinnerActionSingletonObservable
 import com.miapp.controlpersonas_kotlin.home.viewmodel.HomeActivityViewModel
 
 class HomeActivity : AppCompatActivity() {
