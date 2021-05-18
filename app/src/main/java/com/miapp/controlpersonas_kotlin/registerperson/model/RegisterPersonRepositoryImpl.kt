@@ -10,7 +10,7 @@ class RegisterPersonRepositoryImpl() : RegisterPersonRepository {
     private var  resultQuery : Long? = null
 
     override fun setRegisterPersonApi() {
-        //prueba ssh
+        //
     }
 
     override fun setRegisterPersonDB(person: Persona?, context: Context): Long? {
