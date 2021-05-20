@@ -9,8 +9,8 @@ interface PersonDao {
     @Query("SELECT * FROM PersonRoomEntity")
     suspend fun getAll(): List<PersonRoomEntity>
 
-    @Query("SELECT * FROM PersonRoomEntity WHERE id = :id")
-    suspend fun getById(id: Int): PersonRoomEntity
+    @Query("SELECT * FROM PersonRoomEntity WHERE indentification = :identification")
+    suspend fun getById(identification: String): PersonRoomEntity
 
     @Update
     suspend fun update(person: PersonRoomEntity)

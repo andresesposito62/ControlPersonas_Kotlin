@@ -6,11 +6,11 @@ import androidx.room.PrimaryKey
 @Entity
 data class PersonRoomEntity(
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
-    val indentification: String,
-    val names: String,
-    val surnames: String,
-    val phone: String,
-    val temperature: String,
-    val rol : String
+    var id: Int,
+    var indentification: String,
+    var names: String,
+    var surnames: String,
+    var phone: String,
+    var temperature: String,
+    var rol : String
 )
