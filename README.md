@@ -1,4 +1,4 @@
-###ControlApp
+### ControlApp
 
 Es una app para dispositivos Android que ayuda a administradores de sitios publicos a controlar el ingreso de clientes y colaboradores de la siguiente manera:
 
