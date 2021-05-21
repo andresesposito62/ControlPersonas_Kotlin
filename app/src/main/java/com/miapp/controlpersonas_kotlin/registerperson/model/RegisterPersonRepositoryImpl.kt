@@ -43,18 +43,13 @@ class RegisterPersonRepositoryImpl() : RegisterPersonRepository {
 
             val listPersons: List<PersonRoomEntity> = listOf(personRoom)
             val personDao = (PersonsDb.getDatabase(context.applicationContext)).personDao()
-            val dbSizeBefore = personDao.getAll().size
 
             personDao.insert(listPersons)
-
-            if(personDao.getAll().size > dbSizeBefore ){
-                result = 0L
-            }
-            else{
-                result = 1L
-            }
-            Log.d("tag_room", personDao.getAll().toString())
-        }catch (e : NullPointerException){}
+            result = 0L
+            //Log.d("tag_room", personDao.getAll().toString())
+        }catch (e : NullPointerException){
+            result = 1L
+        }
         finally {
             return result
         }
