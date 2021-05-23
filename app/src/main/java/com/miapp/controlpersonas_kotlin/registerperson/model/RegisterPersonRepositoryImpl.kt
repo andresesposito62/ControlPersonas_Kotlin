@@ -34,11 +34,11 @@ class RegisterPersonRepositoryImpl() : RegisterPersonRepository {
         var result = 0L
 
         try {
-            val personRoom = PersonRoomEntity(0, person?.getIdentificacion().toString(),
-                person?.getNombres().toString(),
-                person?.getApellidos().toString(),
-                person?.getTelefono().toString(),
-                person?.getTemperatura().toString(),
+            val personRoom = PersonRoomEntity(0, person!!.getIdentificacion().toString(),
+                person!!.getNombres().toString(),
+                person!!.getApellidos().toString(),
+                person!!.getTelefono().toString(),
+                person!!.getTemperatura().toString(),
                 "PARTNER")
 
             val listPersons: List<PersonRoomEntity> = listOf(personRoom)
