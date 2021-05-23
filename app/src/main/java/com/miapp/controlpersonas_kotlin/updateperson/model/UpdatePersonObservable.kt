@@ -13,7 +13,8 @@ class UpdatePersonObservable: BaseObservable() {
     fun setPersonUpdateApi(){
     }
 
-    fun setPersonUpdateDb(person : Persona?, context: Context): Boolean?{
-        return updatePersonRepository.setPersonUpdateDb(person, context)
+    suspend fun setPersonUpdateDb(person : Persona?, context: Context): Boolean?{
+        return updatePersonRepository.updateRegisterPersonDbRoom(person, context)
+        //return updatePersonRepository.setPersonUpdateDb(person, context)
     }
 }

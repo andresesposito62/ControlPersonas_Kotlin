@@ -7,7 +7,8 @@ import java.util.*
 class DeletePersonObservable: Observable() {
     private var deletePersonRepositoryImpl: DeletePersonRepository = DeletePersonRepositoryImpl()
 
-    fun setDeletePersonDB(person: Persona?, context: Context): Boolean?{
-        return deletePersonRepositoryImpl.setDeletePersonDB(person, context)
+    suspend fun setDeletePersonDB(person: Persona?, context: Context): Boolean?{
+        return deletePersonRepositoryImpl.deleteRegisterPersonDbRoom(person, context)
+        //return deletePersonRepositoryImpl.setDeletePersonDB(person, context)
     }
 }

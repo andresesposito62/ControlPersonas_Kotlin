@@ -7,4 +7,5 @@ import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 interface UpdatePersonRepository {
     fun setPersonUpdateApi()
     fun setPersonUpdateDb(person : Persona?, context: Context) : Boolean?
+    suspend fun updateRegisterPersonDbRoom(person : Persona?, context: Context): Boolean?
 }
