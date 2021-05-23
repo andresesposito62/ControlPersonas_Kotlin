@@ -33,7 +33,7 @@ class ReadPersonRepositoryImpl (): ReadPersonRepository {
 
         try {
             val personDao = (PersonsDb.getDatabase(context.applicationContext)).personDao()
-            val personRoom =  personDao.getById(person?.getIdentificacion().toString())
+            val personRoom =  personDao.getById(person!!.getIdentificacion().toString())
             personResult!!.setIdentificacion(personRoom.indentification)
             personResult!!.setNombres(personRoom.names)
             personResult!!.setApellidos(personRoom.surnames)
