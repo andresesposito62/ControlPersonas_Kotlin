@@ -6,4 +6,5 @@ import com.miapp.controlpersonas_kotlin.modelo.domain.Persona
 interface DeletePersonRepository {
     fun setDeletePersonApi()
     fun setDeletePersonDB(person: Persona?, context: Context): Boolean?
+    suspend fun deleteRegisterPersonDbRoom(person : Persona?, context: Context): Boolean?
 }
